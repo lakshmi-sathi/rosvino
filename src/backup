@@ -1,0 +1,191 @@
+	/** Dump resulting image **/
+            	//std::string fileName = "out_" + std::to_string(image) + ".bmp";
+				//std::string fileName = "/home/turtlebot/out.ppm";
+            	//std::ofstream outFile(fileName);//, std::ofstream::binary);
+            	//if (!outFile.is_open()) {
+            	//    throw std::logic_error("Can't open file : " + fileName);
+            	//}
+				//outFile << "P2 " << W << " " << H << " 3\n";
+				//for(int i = 0, c = 0; i< outArrayClasses.size(); i++){
+				//	for(int j = 0; j< outArrayClasses[i].size(); j++, c++){
+				//		if (c%10==0){
+				//			outFile<<"\n";
+				//		}
+				//		outFile<<outArrayClasses[i][j]<<" ";
+				//	}
+				//}
+				//for(size_t i = 0; i < outArrayClasses.size(); i++ )
+				//{
+				//       const char* buffer = reinterpret_cast<const char*>(&outArrayClasses[i][0]);
+				//       outFile.write(buffer, outArrayClasses[i].size());
+				//}
+           		//writeOutputBmp(outArrayClasses, C, outFile);
+				//std::cout<<"---------_IMAGE --------\n";
+				//for(int i =0; i< outArrayClasses.size(); i++){
+				//	for(int j =0; j< outArrayClasses[i].size(); j++){
+				//		std::cout<<outArrayClasses[i][j]<<" ";
+				//	}
+				//	std::cout<<"\n";
+				//}
+				//
+				//Publish based on whether model output is one channel or multi channel
+				//if (C==1){
+				//	//Convert image vector to opencv matrix and publish to background background topic.
+				//	int rows = static_cast<int>(outArrayClasses.size());
+				//	int cols = static_cast<int>(outArrayClasses[0].size());
+				//	cv::Mat output_image(rows, cols, CV_8UC1);
+				//	for (int i = 0; i < rows; i++){
+				//		output_image.row(i) = cv::Mat(outArrayClasses[i]).t();
+				//	}
+				//	output_image_msg.header.stamp=ros::Time::now();
+				//	output_image_msg.header.frame_id= "segmented_result";
+				//	output_image_msg.height=output_image.rows;
+				//	output_image_msg.width=output_image.cols;	
+				//	output_image_msg.encoding="mono8";
+				//	output_image_msg.is_bigendian=false;
+				//	output_image_msg.step=output_image.cols;//*3;
+				//	size_t size = output_image_msg.step * output_image.rows;
+				//	output_image_msg.data.resize(size);
+				//	memcpy((char*)(&output_image_msg.data[0]), output_image.data, size);
+				//	bg_results.publish(output_image_msg);
+				//} else {
+				//Convert image vector of each channel (class) to opencv matrix and publish to background, road, curb, marks topics respectively
+				//int rows = static_cast<int>(outArrayClasses.size());
+				//int cols = static_cast<int>(outArrayClasses[0].size());
+				//cv::Mat output_image(rows, cols, CV_8UC1);
+				//for (int i = 0; i < rows; i++){
+				//	output_image.row(i) = cv::Mat(outArrayClasses[i]).t();
+				//}
+				
+				//cv::Mat output_image(outArrayClasses.size(), outArrayClasses.at(0).size(), CV_8UC1);
+				//for(int i=0; i<output_image.rows; ++i)
+     			//	for(int j=0; j<output_image.cols; ++j)
+				//	output_image.at<unsigned int>(i, j) = outArrayClasses.at(i).at(j);
+
+				// Create a new, _empty_ cv::Mat with the row size of OrigSamples
+
+                				//std::cout<< "-----------" << output_image.cols << " " << output_image.rows << "rw------\n";
+				//output_image_msg.header.stamp=ros::Time::now();
+				//output_image_msg.header.frame_id= "road_segmentation";
+				//output_image_msg.height=output_image.rows;
+				//output_image_msg.width=output_image.cols;	
+				//output_image_msg.encoding="mono8";
+				//output_image_msg.is_bigendian = false;
+				//output_image_msg.step=output_image.cols;
+				//size_t size = output_image_msg.step * output_image.rows;
+				//output_image_msg.data.resize(size);
+				//memcpy((char*)(&output_image_msg.data[0]), output_image.data, size);
+				////Publish to corresponding topic
+				//seg_results.publish(output_image_msg); 
+
+                /* 
+		//Collecting cpu usage info
+ 		//**********************************************
+		//**********************************************
+		if(cpu_usage_counter%4==0){
+ 			cpu_file.open("/proc/stat", std::ios::in);
+ 			cpu_info.clear();
+ 			if (cpu_file.is_open()){ 
+			 
+ 	  			std::string line, item;
+ 				getline(cpu_file, line);
+ 				cpu_file.close(); 
+ 				std::stringstream ss(line);
+ 				//Skipping first item and a space
+ 				std::getline(ss, item, ' ');
+ 				std::getline(ss, item, ' ');
+ 				while (std::getline(ss, item, ' '))
+ 	  			{
+ 	    			cpu_info.push_back(atoi(item.c_str()));
+ 	  			}
+ 				cpu_work_start = cpu_info[0] + cpu_info[1] + cpu_info[2];
+ 				cpu_tot_start = cpu_info[0] + cpu_info[1] + cpu_info[2] + cpu_info[3] + cpu_info[4] + cpu_info[5] + cpu_info[6] + cpu_info[7] + cpu_info[8] + cpu_info[9];
+ 				//std::cout<< "Test_start" << cpu_work_start << "," << cpu_tot_start << " " << cpu_usage_counter <<"\n"; 
+
+ 			}
+		}	 
+		//**********************************************
+		//**********************************************
+	
+			//Collecting cpu usage info and print it out
+ 			//**********************************************
+			//**********************************************
+			if(cpu_usage_counter%4==1){
+ 				cpu_file.open("/proc/stat", std::ios::in);
+ 				cpu_info.clear();
+ 				if (cpu_file.is_open()){ 
+				 
+ 	  				std::string line, item;
+ 					getline(cpu_file, line);
+ 					cpu_file.close(); 
+ 					std::stringstream ss(line);
+ 					//Skipping first item and a space
+ 					std::getline(ss, item, ' ');
+ 					std::getline(ss, item, ' ');
+ 					while (std::getline(ss, item, ' '))
+ 	  						{
+ 	    		 					cpu_info.push_back(atoi(item.c_str()));
+ 	  						}
+ 					cpu_work_stop = cpu_info[0] + cpu_info[1] + cpu_info[2];
+ 					cpu_tot_stop = cpu_info[0] + cpu_info[1] + cpu_info[2] + cpu_info[3] + cpu_info[4] + cpu_info[5] + cpu_info[6] + cpu_info[7] + cpu_info[8] + cpu_info[9];
+ 					//std::cout<< "Test_stop" << cpu_work_stop << "," << cpu_tot_stop << " " << cpu_usage_counter <<"\n"; 
+
+ 				}
+				cpu_usage = (double)(cpu_work_stop - cpu_work_start)/(cpu_tot_stop - cpu_tot_start);
+				std::cout<< "CPU Usage during inference: "<<cpu_usage<<std::endl;
+			}	 
+			//*********************************************
+			//**********************************************
+
+
+
+
+	*/
+
+	//cv::Mat output_label_image(outArrayClasses_image.size(), outArrayClasses_image[0].size(), cv::DataType<int>::type, outArrayClasses_image.data());
+				//cv::Mat output_prob_image(outArrayProb_image.size(), outArrayProb_image[0].size(), cv::DataType<int>::type, outArrayProb_image.data());
+		        //cv::Mat output_label_image(outArrayClasses_image.size(), outArrayClasses_image[0].size(),  cv::DataType<int>::type);
+				//cv::Mat output_prob_image(outArrayProb_image.size(), outArrayProb_image[0].size(), cv::DataType<float>::type);
+				//memcpy(output_label_image.data, outArrayClasses_image.data(), outArrayClasses_image.size()*outArrayClasses_image[0].size()*sizeof(uint8_t));
+				//memcpy(output_prob_image.data, outArrayProb_image.data(), outArrayProb_image.size()*outArrayProb_image[0].size()*sizeof(float));
+				//for (size_t i = 0; i < outArrayClasses_image.size(); i++)
+				//{   
+				//    for (size_t j = 0; j < outArrayClasses_image[0].size(); j++)
+				//    {   
+				//        output_label_image.at<int>(i,j) = (int) outArrayClasses_image[i][j];
+				//		output_prob_image.at<float>(i,j) = (float) outArrayProb_image[i][j];
+				//    }   
+				//} 
+    			
+				
+					//out_image.image = output_image;
+				//out_image.encoding = "mono8";
+				//out_image.toImageMsg(output_image_msg);
+				//seg_results.publish(output_image_msg);
+				//cv::cvtColor(output_label_image, output_label_image, cv::COLOR_RGB2GRAY);
+		        //cv::cvtColor(output_prob_image, output_prob_image, cv::COLOR_RGB2GRAY);
+
+				//sensor_msgs::Image output_class_label_msg, output_class_prob_msg;
+				//output_class_label_msg.header.stamp=ros::Time::now();
+                //output_class_label_msg.header.frame_id="ClassLabelImage";
+                //output_class_label_msg.height=output_label_image.rows;
+                //output_class_label_msg.width=output_label_image.cols;
+                //output_class_label_msg.encoding="mono8";
+                //output_class_label_msg.is_bigendian=false;
+                //output_class_label_msg.step= output_label_image.cols;
+                //size_t size = output_class_label_msg.step * output_label_image.rows;
+                //output_class_label_msg.data.resize(size);
+                //memcpy((char*)(&output_class_label_msg.data[0]), output_label_image.data, size);
+                //seg_result_labels.publish(output_class_label_msg);
+//
+				//output_class_prob_msg.header.stamp=ros::Time::now();
+                //output_class_prob_msg.header.frame_id="ClassProbabilityImage";
+                //output_class_prob_msg.height=output_prob_image.rows;
+                //output_class_prob_msg.width=output_prob_image.cols;
+                //output_class_prob_msg.encoding="mono8";
+                //output_class_prob_msg.is_bigendian=false;
+                //output_class_prob_msg.step= output_prob_image.cols*sizeof(uint8_t);
+                //size = output_class_prob_msg.step * output_prob_image.rows;
+                //output_class_prob_msg.data.resize(size);
+                //memcpy((char*)(&output_class_prob_msg.data[0]), output_prob_image.data, size);
+                //seg_result_probs.publish(output_class_prob_msg);

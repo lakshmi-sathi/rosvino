@@ -1,0 +1,506 @@
+#include <ros/ros.h>
+#include <iostream>
+#include <thread>
+#include <fstream>
+#include <sstream>
+#include <inference_engine.hpp>
+#include <rosvino/Object.h>
+#include <rosvino/Objects.h>
+#include <sensor_msgs/Image.h>
+#include <opencv2/opencv.hpp>
+#include <sensor_msgs/Image.h>
+#include <chrono>
+
+using namespace InferenceEngine;
+using namespace std::chrono;
+
+//*************************************************************
+//*************************************************************
+//
+//                   VARIABLE DECLARATIONS
+//
+//*************************************************************
+//*************************************************************
+
+//Frames for keeping received images
+cv::Mat frame_now;
+cv::Mat frame_next;
+
+//Timing
+double start;// = std::chrono::high_resolution_clock::now();
+double stop;// = std::chrono::high_resolution_clock::now();
+//std::chrono::duration<microseconds> duration;
+float running_avg_latency;
+
+//Node parameters
+std::string device;
+float confidence_thresh;
+std::string network_loc;
+std::string weights_loc;
+
+//For loading plugin for specified device
+InferencePlugin device_plugin;
+
+//For loading network to device
+ExecutableNetwork model_network;
+
+//For storing network info
+std::string inputLayerName;
+std::string outputLayerName;
+int num_classes;
+SizeVector output_dimension;
+int results_number;
+int object_size;
+
+
+//For storing inference request object
+InferRequest::Ptr inferReqCurr;
+InferRequest::Ptr inferReqNext;
+
+//For fetching results
+float *compute_results;
+
+//output msg classes
+rosvino::Object result_obj;
+rosvino::Objects results;
+
+
+//Flags
+bool frame_available=false;
+bool last_frame=true;
+
+//*************************************************************
+//*************************************************************
+//
+//              IMAGE MATRIX TO BLOB CONVERSION
+//
+//*************************************************************
+//*************************************************************
+//OpenCV mat to blob
+static InferenceEngine::Blob::Ptr mat_to_blob(const cv::Mat &image) {
+    InferenceEngine::TensorDesc tensor(InferenceEngine::Precision::U8,{1, (size_t)image.channels(), (size_t)image.size().height, (size_t)image.size().width},InferenceEngine::Layout::NHWC);
+    return InferenceEngine::make_shared_blob<uint8_t>(tensor, image.data);
+}
+
+//Image to blob
+void frame_to_blob(const cv::Mat& image, InferRequest::Ptr& inferReq, const std::string& descriptor) {
+    inferReq->SetBlob(descriptor, mat_to_blob(image));
+}
+
+//*************************************************************
+//*************************************************************
+//
+//                         CALLBACK
+//
+//*************************************************************
+//*************************************************************
+//To run each time a new image is obtained
+void imageCallback(const sensor_msgs::Image::ConstPtr& image_msg){
+    cv::Mat color_mat(image_msg->height,image_msg->width,CV_MAKETYPE(CV_8U,3),const_cast<uchar*>(&image_msg->data[0]), image_msg->step);
+    cv::cvtColor(color_mat,color_mat,cv::COLOR_BGR2RGB);
+    std::cout<<"Callback ran!\n";
+    if(!frame_available){
+        color_mat.copyTo(frame_now);
+        frame_available=true;
+    }
+    color_mat.copyTo(frame_next);
+    last_frame=false;
+}
+
+//*************************************************************
+//*************************************************************
+//
+//                         MAIN
+//
+//*************************************************************
+//*************************************************************
+
+int main(int argc, char **argv) {
+	ros::init(argc, argv, "person_detect");
+	ros::NodeHandle nh;
+	ros::Subscriber image_sub = nh.subscribe("/person_detect/inp_img",1,imageCallback);
+	ros::Publisher det_results = nh.advertise<rosvino::Objects>("/person_detect/det_results",1);
+	std::fstream cpu_file;  //For CPU information
+	
+	//*************************************************************
+	//
+	//                   FETCH NODE PARAMETERS
+	//
+	//*************************************************************
+	try{
+		if(!nh.getParam("/person_detect/threshold", confidence_thresh)){
+			confidence_thresh=0.5;
+		}
+		if(!nh.getParam("/person_detect/target", device)){
+			device="MYRIAD";
+		}
+		if(!nh.getParam("/person_detect/network", network_loc)){
+			network_loc = "/opt/intel/openvino/deployment_tools/open_model_zoo/tools/downloader/intel/pedestrian-detection-adas-0002/FP16/pedestrian-detection-adas-0002.xml";
+		}
+	
+		if(!nh.getParam("/person_detect/weights", weights_loc)){
+			weights_loc = "/opt/intel/openvino/deployment_tools/open_model_zoo/tools/downloader/intel/pedestrian-detection-adas-0002/FP16/pedestrian-detection-adas-0002.bin";
+		}
+	}
+	catch(const std::exception& e){
+		ROS_ERROR("%s",e.what());
+		std::cout<<"Error fetching parameters. More:" << e.what() << std::endl;
+		return -1;
+	}
+
+	//*************************************************************
+	//
+	//              LOAD PLUGIN OF SPECIFIED DEVICE
+	//
+	//*************************************************************
+	try{
+		//Loading plugin as per the specified device
+		device_plugin = PluginDispatcher({"../../../lib/intel64", ""}).getPluginByDevice(device);
+	}
+	catch(const std::exception& e){
+		ROS_ERROR("%s",e.what());
+		std::cout<<"Error fetching plugin for specified device. More:" << e.what() << std::endl;
+		return -1;
+	}
+
+	//*************************************************************
+	//
+	//            READ THE NETWORK FROM THE IR FILES
+	//
+	//*************************************************************
+	CNNNetReader network_reader;
+	try{
+		network_reader.ReadNetwork(network_loc);
+		network_reader.ReadWeights(weights_loc);
+     	}
+	catch(const std::exception& e){
+		ROS_ERROR("%s",e.what());
+		std::cout<<"Error reading network from IR. More:" << e.what() << std::endl;
+		return -1;
+	}
+
+	//*************************************************************
+	//
+	//   TAKE INPUT AND OUTPUT LAYER INFO AND SET LAYER SETTINGS
+	//
+	//*************************************************************
+	try{
+		//input setup
+		InputsDataMap input_info(network_reader.getNetwork().getInputsInfo());
+       
+		InputInfo::Ptr& input_data = input_info.begin()->second;
+		inputLayerName = input_info.begin()->first;
+		input_data->setPrecision(Precision::U8);
+	
+		input_data->getPreProcess().setResizeAlgorithm(ResizeAlgorithm::RESIZE_BILINEAR);
+		input_data->getInputData()->setLayout(Layout::NHWC);
+	}
+	catch(const std::exception& e){
+		ROS_ERROR("%s",e.what());
+		std::cout<<"Error loading/configuring input layer. More:" << e.what() << std::endl;
+		return -1;
+	}
+	try{
+		//output setup
+		OutputsDataMap output_info(network_reader.getNetwork().getOutputsInfo());
+		DataPtr& output_data = output_info.begin()->second;
+		outputLayerName = output_info.begin()->first;
+		num_classes = network_reader.getNetwork().getLayerByName(outputLayerName.c_str())->GetParamAsInt("num_classes");
+		output_dimension = output_data->getTensorDesc().getDims();
+		results_number = output_dimension[2];
+		object_size = output_dimension[3];
+		if ((object_size != 7 || output_dimension.size() != 4)) {
+			ROS_ERROR("There is a problem with output dimension");
+		}
+		output_data->setPrecision(Precision::FP32);
+		output_data->setLayout(Layout::NCHW);
+	}
+	catch(const std::exception& e){
+		ROS_ERROR("%s",e.what());
+		std::cout<<"Error loading/configuring output layer. More:" << e.what() << std::endl;
+		return -1;
+	}
+
+	//*************************************************************
+	//
+	//                 LOAD THE NETWORK TO DEVICE
+	//
+	//*************************************************************
+	try{
+		//Loading network to device
+		model_network = device_plugin.LoadNetwork(network_reader.getNetwork(), {});
+	}
+	catch(const std::exception& e){
+		ROS_ERROR("%s",e.what());
+		std::cout<<"Error loading network to device. More:" << e.what() << std::endl;
+		return -1;
+	}
+
+	try{
+		//Create inference request objects for handling current and upcoming frame
+		inferReqNext = model_network.CreateInferRequestPtr();
+        	inferReqCurr = model_network.CreateInferRequestPtr();
+	}
+	catch(const std::exception& e){
+		ROS_ERROR("%s",e.what());
+		std::cout<<"Error creating inference request objects. More:" << e.what() << std::endl;
+		return -1;
+	}
+	bool first_frame = true;
+	int count = 0;
+	int iter_counter = 0; //for counting iterations to take average of cpu_usage
+	int frame_avail_counter = 0 ; //To track the availability of frames
+	int cpu_usage_count = 0;
+	running_avg_latency = 0.;
+	double start_time = ros::Time::now().toSec();
+	float fps;
+	long int cpu_work_start = 0, cpu_tot_start = 0, cpu_work_stop, cpu_tot_stop;
+	double cpu_usage, running_avg_cpu_usage;
+	std::vector<long int> cpu_info;
+	//*************************************************************
+	//
+	//              THE RUNNING LOOP FOR THE NODE
+	//
+	//*************************************************************
+	while(ros::ok()){
+		//*************************************************************
+		//
+		//                 COLLECT CPU USAGE INFO
+		//
+		//*************************************************************
+		iter_counter++;
+		if(iter_counter%100000==0){
+			//Collecting cpu usage info
+			//**********************************************
+			cpu_file.open("/proc/stat", std::ios::in);
+			cpu_info.clear();
+			if (cpu_file.is_open()){ 
+				
+    				std::string line, item;
+				getline(cpu_file, line);
+				cpu_file.close(); 
+				std::stringstream ss(line);
+				//Skipping first item and a space
+				std::getline(ss, item, ' ');
+				std::getline(ss, item, ' ');
+				while (std::getline(ss, item, ' '))
+    				{
+       					cpu_info.push_back(atoi(item.c_str()));
+    				}
+				cpu_work_stop = cpu_info[0] + cpu_info[1] + cpu_info[2];
+				cpu_tot_stop = cpu_info[0] + cpu_info[1] + cpu_info[2] + cpu_info[3] + cpu_info[4] + cpu_info[5] + cpu_info[6] + cpu_info[7] + cpu_info[8] + cpu_info[9];
+				//std::cout<< "Test_stop" << cpu_work_stop << "," << cpu_tot_stop << "\n"; 
+				
+			}
+			//***********************************************
+			cpu_usage_count++;		
+			//Calculating cpu usage
+			cpu_usage = (double)(cpu_work_stop - cpu_work_start)/(cpu_tot_stop - cpu_tot_start);
+			//running_avg_cpu_usage += cpu_usage;
+			//std::cout << "Test" << cpu_usage<<"\n";
+			if(cpu_usage_count%4==0){
+				running_avg_cpu_usage += cpu_usage;
+				running_avg_cpu_usage = (float) running_avg_cpu_usage / 4;
+				std::cout<<"------------ Running Average CPU Usage = "<< std::setprecision(4) << running_avg_cpu_usage * 100<< "% ------------\n";
+				running_avg_cpu_usage = 0;
+			} else {
+				running_avg_cpu_usage += cpu_usage;
+			}
+			
+			//Collecting cpu usage info
+			//************************************************
+			cpu_file.open("/proc/stat", std::ios::in);
+				
+			if (cpu_file.is_open()){ 
+						
+    				std::string line, item;
+				getline(cpu_file, line);
+				cpu_file.close(); 
+				std::stringstream ss(line);
+				//Skipping first item and a space
+				std::getline(ss, item, ' ');
+				std::getline(ss, item, ' ');
+				while (std::getline(ss, item, ' '))
+    				{
+       					cpu_info.push_back(atoi(item.c_str()));
+    				}
+				cpu_work_start = cpu_info[0] + cpu_info[1] + cpu_info[2];
+				cpu_tot_start = cpu_info[0] + cpu_info[1] + cpu_info[2] + cpu_info[3] + cpu_info[4] + cpu_info[5] + cpu_info[6] + cpu_info[7] + cpu_info[8] + cpu_info[9];
+				//std::cout<<"Test_start" << cpu_work_start << "," << cpu_tot_start << "\n"; 
+						
+			}
+			//**************************************************
+		}
+
+		//*************************************************************
+		//
+		//                    RUN CALLBACKS ONCE
+		//
+		//*************************************************************
+		try{
+			//Run all callbacks
+			ros::spinOnce();
+		}
+		catch(const std::exception& e){
+		ROS_ERROR("%s",e.what());
+		std::cout<<"Error calling callbacks to check topic. More:" << e.what() << std::endl;
+		return -1;
+		}
+
+
+		//*************************************************************
+		//
+		//           IMAGE TO BLOB TO INFERENCE REQUEST
+		//
+		//*************************************************************
+		if(frame_available){
+			frame_avail_counter++;
+			try{
+				//Associate the frame to its inference request
+				double start_conv = ros::Time::now().toSec();
+				if(first_frame){
+					frame_to_blob(frame_now, inferReqCurr, inputLayerName);
+				}
+				if(!last_frame){
+					frame_to_blob(frame_next, inferReqNext, inputLayerName);
+				}
+				double stop_conv = ros::Time::now().toSec();
+				double duration_conv = stop_conv - start_conv;
+				std::cout << "----- Image to Blob time = " << duration_conv << " secs ------\n";
+			}
+			catch(const std::exception& e){
+				ROS_ERROR("%s",e.what());
+				std::cout<<"Error associating image blob with inference request. More:" << e.what() << std::endl;
+				return -1;
+			}
+			//*************************************************************
+			//
+			//               START INFERENCE REQUESTS
+			//
+			//*************************************************************
+			try{
+				//Start the inference requests in Asynchronous mode
+				start = ros::Time::now().toSec(); //std::chrono::high_resolution_clock::now();			        
+				if(first_frame){
+					std::cout<<"sending inference request\n";
+					inferReqCurr->StartAsync();
+				}
+				if(!last_frame){
+					std::cout<<"sending inference request\n";
+					inferReqNext->StartAsync();
+				}
+				//Checking thread ID to detect multi-threading
+				std::cout<< "Thread ID:" << std::this_thread::get_id()<<std::endl;
+			}
+			catch(const std::exception& e){
+				ROS_ERROR("%s",e.what());
+				std::cout<<"Error sending Asynchronous inference request. More:" << e.what() << std::endl;
+				return -1;
+			}
+			//For testing iter count vs inference count
+			std::cout<<"iter_counter =" <<iter_counter<< "; "<<"infer count =" <<count << "; "<< "frame availability count =" << frame_avail_counter<<std::endl;
+			//*************************************************************
+			//
+			//             	     WAIT TILL RESULT READY
+			//
+			//*************************************************************
+			if (OK == inferReqCurr->Wait(IInferRequest::WaitMode::RESULT_READY)) {
+				//Take Latency calculation
+				stop = ros::Time::now().toSec();//std::chrono::high_resolution_clock::now();
+				double duration = stop - start; //std::chrono::duration_cast<std::chrono::duration<double>>(stop - start);
+				std::cout<<"\nLatency = "<< duration <<std::endl;
+				std::cout<<"Inference " << count << " Completed!\n";
+				count++;
+				//Checking thread ID to detect multi-threading
+				std::cout<< "Thread ID:" <<std::this_thread::get_id()<<std::endl;
+				if(count%4==0){
+					running_avg_latency += duration;//.count();
+					running_avg_latency = (float) running_avg_latency / 4;
+					std::cout<<"------------ Running Average Latency = "<< running_avg_latency << " secs ------------\n";
+					running_avg_latency = 0;
+				} else {
+					running_avg_latency += duration;//.count();
+				}
+					 
+				try{
+					//Fetch the result associated with the inference request
+					compute_results = inferReqCurr->GetBlob(outputLayerName)->buffer().as<PrecisionTrait<Precision::FP32>::value_type*>();
+				}
+				catch(const std::exception& e){
+					ROS_ERROR("%s",e.what());
+					std::cout<<"Error retrieving inference results. More:" << e.what() << std::endl;
+					return -1;
+				}
+                		for (int i = 0; i < results_number; i++) {
+					//Extract the individual result values from the aggregated result
+                    			float result_id = compute_results[i * object_size + 0];
+			                int result_label = static_cast<int>(compute_results[i * object_size + 1]);
+                                        float result_confidence = compute_results[i * object_size + 2];
+                                        float result_xmin = compute_results[i * object_size + 3];
+                    			float result_ymin = compute_results[i * object_size + 4];
+                    			float result_xmax = compute_results[i * object_size + 5];
+                    			float result_ymax = compute_results[i * object_size + 6];
+					
+					if (result_confidence > confidence_thresh){
+						//Load the results to message object
+						result_obj.label= result_label;
+						result_obj.confidence=result_confidence;
+						result_obj.x=result_xmin;
+						result_obj.y=result_ymin;
+						result_obj.width=result_xmax-result_xmin;
+						result_obj.height=result_ymax-result_ymin;
+						results.objects.push_back(result_obj);
+						std::cout<<"\nLabel = "<< result_label;
+						std::cout<<"\nConfidence = "<< result_obj.confidence;
+						std::cout<<"\nXmin = "<< result_obj.x;
+						std::cout<<"\nYmin = "<< result_obj.y;
+						std::cout<<"\nWidth = "<< result_obj.width;
+						std::cout<<"\nHeight = "<< result_obj.height;
+					}
+				}
+			}
+			//*************************************************************
+			//
+			//               PUBLISH THE RESULTS OBTAINED
+			//
+			//*************************************************************
+		    	try{
+				std::cout<<"\nPublishing results...\n";
+				//Publishing results and clearing messages object
+				results.header.stamp=ros::Time::now();
+				det_results.publish(results);
+				results.objects.clear();
+			}
+			catch(const std::exception& e){
+				ROS_ERROR("%s",e.what());
+				std::cout<<"Error publishing inference result. More:" << e.what() << std::endl;
+				return -1;
+			}	
+
+			//*************************************************************
+			//
+			//              CALCULATE INFERENCES PER SECOND
+			//
+			//*************************************************************
+			double stop_time = ros::Time::now().toSec();
+			fps = (stop_time - start_time > 1)?count:fps;
+			if(stop_time - start_time > 1){
+				std::cout<<"-------- Inferences per second = "<< fps << "--------\n";
+				start_time = ros::Time::now().toSec();
+				count = 0;
+			}
+			//Spinning again
+			ros::spinOnce();
+			if (first_frame) {
+				first_frame = false;
+			}
+			frame_now = frame_next;
+			frame_next = cv::Mat();
+			inferReqCurr.swap(inferReqNext);
+			frame_available=false;	
+			last_frame=true;
+			
+		}
+	}
+	return 0;
+}

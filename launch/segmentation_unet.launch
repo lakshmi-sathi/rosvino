@@ -1,0 +1,39 @@
+<launch>
+    <arg name="device"                     default="MYRIAD" />
+    <arg name="mode"                       default="image" />
+    <arg name="input_image"                default="road7.jpg" />
+    <arg name="input_video"                default="vid2.mp4" />
+   
+    <node name="local_image" pkg="rosvino" type="local_image" if="$(eval mode == 'image')">
+        <param name="inp_img"           value="$(find rosvino)/input/$(arg input_image)" />
+    </node>
+
+    <node name="local_video" pkg="rosvino" type="local_video" if="$(eval mode == 'video')">
+        <param name="inp_vid"           value="$(find rosvino)/input/$(arg input_video)" />
+    </node>
+
+    <node name="segment" pkg="rosvino" type="segment" output="screen" if="$(eval mode == 'image')">
+        <remap from="/segment/input"           to="/local_image/image" />
+        <param name="target_device"            value="$(arg device)" />
+        <param name="network"                  value="$(find rosvino)/models/segmentation/unet/unet-camvid-onnx-0001.xml" />   
+    </node>
+
+    <node name="segment" pkg="rosvino" type="segment" output="screen" if="$(eval mode == 'video')">
+        <remap from="/segment/input"           to="/local_video/video" />
+        <param name="target_device"            value="$(arg device)" />
+        <param name="network"                  value="$(find rosvino)/models/segmentation/unet/unet-camvid-onnx-0001.xml" />   
+    </node>
+
+    <node name="class_labels_image" pkg="image_view" type="image_view">
+        <remap from="/image"             to="/segment/result_labels" />
+    </node>
+
+    <node name="class_probabilities_image" pkg="image_view" type="image_view">
+        <remap from="/image"             to="/segment/result_probs" />
+    </node>
+
+    <node name="original_image" pkg="image_view" type="image_view" if="$(eval mode == 'video')">
+        <remap from="/image"             to="/local_video/video" />
+    </node>
+
+</launch>

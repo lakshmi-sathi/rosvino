@@ -1,0 +1,3699 @@
+<?xml version="1.0" ?>
+<mapping>
+	<map>
+		<framework name="efficientnet-b0/blocks_5/se/conv2d_1/BiasAdd" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_5/se/conv2d_1/BiasAdd/Add" out_port_id="2" id="166"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_8/se/conv2d/BiasAdd/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_8/se/conv2d/BiasAdd/ReadVariableOp/EltwiseUnsqueeze36566_const" out_port_id="0" id="243"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_3/se/IdentityN" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_3/se/mul" out_port_id="1" id="103"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_3/se/mul" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_3/se/mul" out_port_id="1" id="103"/>
+	</map>
+	<map>
+		<framework name="box_net/box-2-bn-3/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="box_net/box-2/BiasAdd/Add/Fused_Add_" out_port_id="2" id="915"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_10/se/IdentityN" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_10/se/mul" out_port_id="1" id="300"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_10/se/mul" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_10/se/mul" out_port_id="1" id="300"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_15/conv2d/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_15/conv2d/Conv2D/Transpose45562_const" out_port_id="0" id="427"/>
+	</map>
+	<map>
+		<framework name="class_net/class-0/separable_conv2d/ReadVariableOp" out_port_id="0"/>
+		<IR name="6204962052_const" out_port_id="0" id="1115"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_11/se/conv2d_1/Conv2D" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_11/se/conv2d_1/Conv2D" out_port_id="2" id="334"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode1/AddN_1" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode1/AddN_1/sum_1" out_port_id="2" id="506"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode5/truediv_2" out_port_id="0"/>
+		<IR name="fpn_cells/cell_2/fnode5/mul_2/Fused_Mul_" out_port_id="2" id="981"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode7/truediv_1" out_port_id="0"/>
+		<IR name="fpn_cells/cell_1/fnode7/mul_1/Fused_Mul_" out_port_id="2" id="791"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode1/resample_0_2_6/conv2d/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode1/resample_0_2_6/conv2d/Conv2D/Transpose45600_const" out_port_id="0" id="454"/>
+	</map>
+	<map>
+		<framework name="class_net/class-predict/BiasAdd/ReadVariableOp" out_port_id="0"/>
+		<IR name="class_net/class-predict/BiasAdd/ReadVariableOp/EltwiseUnsqueeze36494_const" out_port_id="0" id="1140"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_9/tpu_batch_normalization_1/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_9/tpu_batch_normalization_1/FusedBatchNormV3/variance/Fused_Add_" out_port_id="2" id="264"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode5/op_after_combine10/conv/separable_conv2d/ReadVariableOp_1" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode5/op_after_combine10/conv/separable_conv2d/Transpose45656_const" out_port_id="0" id="598"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_9/se/conv2d/BiasAdd" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_9/se/conv2d/BiasAdd/Add" out_port_id="2" id="271"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_3/se/conv2d_1/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_3/se/conv2d_1/Conv2D/Transpose45268_const" out_port_id="0" id="104"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_9/IdentityN_1" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_9/mul_1" out_port_id="1" id="265"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_9/mul_1" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_9/mul_1" out_port_id="1" id="265"/>
+	</map>
+	<map>
+		<framework name="box_net/box-0-bn-3/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="box_net/box-0/BiasAdd/Add/Fused_Add_" out_port_id="2" id="901"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_5/se/Mean" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_5/se/Mean" out_port_id="2" id="157"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_14/depthwise_conv2d/depthwise/ReadVariableOp" out_port_id="0"/>
+		<IR name="6200962012_const" out_port_id="0" id="404"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_10/se/conv2d_1/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_10/se/conv2d_1/Conv2D/Transpose45450_const" out_port_id="0" id="301"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_4/se/conv2d_1/BiasAdd" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_4/se/conv2d_1/BiasAdd/Add" out_port_id="2" id="134"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_8/IdentityN_1" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_8/mul_1" out_port_id="1" id="238"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_8/mul_1" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_8/mul_1" out_port_id="1" id="238"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_4/conv2d_1/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_4/conv2d_1/Conv2D/Transpose45298_const" out_port_id="0" id="137"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode5/op_after_combine10/IdentityN" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode5/op_after_combine10/mul" out_port_id="1" id="595"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode5/op_after_combine10/mul" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode5/op_after_combine10/mul" out_port_id="1" id="595"/>
+	</map>
+	<map>
+		<framework name="class_net/class-1_4/separable_conv2d/ReadVariableOp_1" out_port_id="0"/>
+		<IR name="class_net/class-1_4/separable_conv2d/Transpose45944_const" out_port_id="0" id="1248"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode4/truediv" out_port_id="0"/>
+		<IR name="fpn_cells/cell_2/fnode4/mul/Fused_Mul_" out_port_id="2" id="928"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_0/se/conv2d/BiasAdd" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_0/se/conv2d/BiasAdd/Add" out_port_id="2" id="20"/>
+	</map>
+	<map>
+		<framework name="class_net/class-predict_4/separable_conv2d/ReadVariableOp_1" out_port_id="0"/>
+		<IR name="class_net/class-predict_4/separable_conv2d/Transpose45960_const" out_port_id="0" id="1262"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_11/se/mul_1" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_11/se/mul_1" out_port_id="2" id="338"/>
+	</map>
+	<map>
+		<framework name="box_net/box-predict_2/separable_conv2d/depthwise" out_port_id="0"/>
+		<IR name="box_net/box-predict_2/separable_conv2d/depthwise" out_port_id="2" id="1012"/>
+	</map>
+	<map>
+		<framework name="box_net/IdentityN_12" out_port_id="0"/>
+		<IR name="box_net/mul_12" out_port_id="1" id="1087"/>
+	</map>
+	<map>
+		<framework name="box_net/mul_12" out_port_id="0"/>
+		<IR name="box_net/mul_12" out_port_id="1" id="1087"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode5/AddN_1" out_port_id="0"/>
+		<IR name="fpn_cells/cell_2/fnode5/AddN_1/sum_2" out_port_id="2" id="982"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_6/Identity_2" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_6/tpu_batch_normalization_2/FusedBatchNormV3/variance/Fused_Add_" out_port_id="2" id="199"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_6/tpu_batch_normalization_2/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_6/tpu_batch_normalization_2/FusedBatchNormV3/variance/Fused_Add_" out_port_id="2" id="199"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_14/se/conv2d_1/Conv2D" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_14/se/conv2d_1/Conv2D" out_port_id="2" id="417"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_14/se/IdentityN" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_14/se/mul" out_port_id="1" id="415"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_14/se/mul" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_14/se/mul" out_port_id="1" id="415"/>
+	</map>
+	<map>
+		<framework name="box_net/box-0-bn-4/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="box_net/box-0_1/BiasAdd/Add/Fused_Add_" out_port_id="2" id="948"/>
+	</map>
+	<map>
+		<framework name="box_net/IdentityN_14" out_port_id="0"/>
+		<IR name="box_net/mul_14" out_port_id="1" id="1101"/>
+	</map>
+	<map>
+		<framework name="box_net/mul_14" out_port_id="0"/>
+		<IR name="box_net/mul_14" out_port_id="1" id="1101"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode0/op_after_combine5/IdentityN" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode0/op_after_combine5/mul" out_port_id="1" id="483"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode0/op_after_combine5/mul" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode0/op_after_combine5/mul" out_port_id="1" id="483"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode2/resample_1_6_7/resize/ResizeNearestNeighbor" out_port_id="0"/>
+		<IR name="fpn_cells/cell_1/fnode2/resample_1_6_7/resize/ResizeNearestNeighbor" out_port_id="4" id="696"/>
+	</map>
+	<map>
+		<framework name="box_net/box-2_2/separable_conv2d/ReadVariableOp" out_port_id="0"/>
+		<IR name="6186161864_const" out_port_id="0" id="1004"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode3/truediv_1" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode3/mul_1/Fused_Mul_" out_port_id="2" id="553"/>
+	</map>
+	<map>
+		<framework name="box_net/box-2_4/separable_conv2d/depthwise" out_port_id="0"/>
+		<IR name="box_net/box-2_4/separable_conv2d/depthwise" out_port_id="2" id="1096"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_1/se/conv2d/BiasAdd/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_1/se/conv2d/BiasAdd/ReadVariableOp/EltwiseUnsqueeze36554_const" out_port_id="0" id="46"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_12/IdentityN_1" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_12/mul_1" out_port_id="1" id="352"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_12/mul_1" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_12/mul_1" out_port_id="1" id="352"/>
+	</map>
+	<map>
+		<framework name="class_net/class-predict_3/separable_conv2d/ReadVariableOp_1" out_port_id="0"/>
+		<IR name="class_net/class-predict_3/separable_conv2d/Transpose45928_const" out_port_id="0" id="1231"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode0/AddN_1" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode0/AddN_1/sum_1" out_port_id="2" id="482"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_14/se/Mean" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_14/se/Mean" out_port_id="2" id="410"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_12/se/conv2d_1/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_12/se/conv2d_1/Conv2D/Transpose45502_const" out_port_id="0" id="360"/>
+	</map>
+	<map>
+		<framework name="box_net/box-2_1/separable_conv2d/depthwise" out_port_id="0"/>
+		<IR name="box_net/box-2_1/separable_conv2d/depthwise" out_port_id="2" id="958"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_13/se/mul_1" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_13/se/mul_1" out_port_id="2" id="393"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_13/IdentityN" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_13/mul" out_port_id="1" id="375"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_13/mul" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_13/mul" out_port_id="1" id="375"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_8/Identity_2" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_8/tpu_batch_normalization_2/FusedBatchNormV3/variance/Fused_Add_" out_port_id="2" id="255"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_8/tpu_batch_normalization_2/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_8/tpu_batch_normalization_2/FusedBatchNormV3/variance/Fused_Add_" out_port_id="2" id="255"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_14/se/conv2d/Conv2D" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_14/se/conv2d/Conv2D" out_port_id="2" id="412"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_2/se/conv2d_1/BiasAdd/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_2/se/conv2d_1/BiasAdd/ReadVariableOp/EltwiseUnsqueeze36510_const" out_port_id="0" id="78"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode7/truediv" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode7/mul/Fused_Mul_" out_port_id="2" id="623"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_8/se/IdentityN" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_8/se/mul" out_port_id="1" id="245"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_8/se/mul" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_8/se/mul" out_port_id="1" id="245"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_11/Identity_2" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_11/tpu_batch_normalization_2/FusedBatchNormV3/variance/Fused_Add_" out_port_id="2" id="342"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_11/tpu_batch_normalization_2/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_11/tpu_batch_normalization_2/FusedBatchNormV3/variance/Fused_Add_" out_port_id="2" id="342"/>
+	</map>
+	<map>
+		<framework name="box_net/box-1_1/separable_conv2d/ReadVariableOp_1" out_port_id="0"/>
+		<IR name="box_net/box-1_1/separable_conv2d/Transpose46008_const" out_port_id="0" id="952"/>
+	</map>
+	<map>
+		<framework name="resample_p7/max_pooling2d_1/MaxPool" out_port_id="0"/>
+		<IR name="resample_p7/max_pooling2d_1/MaxPool" out_port_id="1" id="465"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode6/op_after_combine11/conv/separable_conv2d/ReadVariableOp" out_port_id="0"/>
+		<IR name="6204562048_const" out_port_id="0" id="1031"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_10/IdentityN" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_10/mul" out_port_id="1" id="288"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_10/mul" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_10/mul" out_port_id="1" id="288"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode5/truediv_2" out_port_id="0"/>
+		<IR name="fpn_cells/cell_1/fnode5/mul_2/Fused_Mul_" out_port_id="2" id="758"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode2/op_after_combine7/conv/separable_conv2d/ReadVariableOp_1" out_port_id="0"/>
+		<IR name="fpn_cells/cell_1/fnode2/op_after_combine7/conv/separable_conv2d/Transpose45696_const" out_port_id="0" id="703"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_0/depthwise_conv2d/depthwise/ReadVariableOp" out_port_id="0"/>
+		<IR name="6194561948_const" out_port_id="0" id="10"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode2/op_after_combine7/bn/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="fpn_cells/cell_2/fnode2/op_after_combine7/conv/BiasAdd/Add/Fused_Add_" out_port_id="2" id="871"/>
+	</map>
+	<map>
+		<framework name="class_net/class-predict/separable_conv2d" out_port_id="0"/>
+		<IR name="class_net/class-predict/separable_conv2d" out_port_id="2" id="1139"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode1/resample_1_5_6/resize/size" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode1/resample_1_5_6/resize/ResizeNearestNeighbor/Cast_163600_const" out_port_id="0" id="490"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode4/resample_2_8_9/max_pooling2d_10/MaxPool" out_port_id="0"/>
+		<IR name="fpn_cells/cell_2/fnode4/resample_2_8_9/max_pooling2d_10/MaxPool" out_port_id="1" id="932"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode6/op_after_combine11/bn/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="fpn_cells/cell_1/fnode6/op_after_combine11/conv/BiasAdd/Add/Fused_Add_" out_port_id="2" id="784"/>
+	</map>
+	<map>
+		<framework name="box_net/box-predict_4/BiasAdd" out_port_id="0"/>
+		<IR name="box_net/box-predict_4/BiasAdd/Add/Transpose" out_port_id="2" id="1109"/>
+	</map>
+	<map>
+		<framework name="box_net/box-predict_4/separable_conv2d/ReadVariableOp" out_port_id="0"/>
+		<IR name="6216162164_const" out_port_id="0" id="1102"/>
+	</map>
+	<map>
+		<framework name="box_net/box-predict_1/BiasAdd" out_port_id="0"/>
+		<IR name="box_net/box-predict_1/BiasAdd/Add/Transpose" out_port_id="2" id="971"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_4/depthwise_conv2d/depthwise/ReadVariableOp" out_port_id="0"/>
+		<IR name="6206562068_const" out_port_id="0" id="119"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_3/conv2d/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_3/conv2d/Conv2D/Transpose45250_const" out_port_id="0" id="87"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_9/conv2d_1/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_9/conv2d_1/Conv2D/Transpose45428_const" out_port_id="0" id="279"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode4/op_after_combine9/conv/separable_conv2d/ReadVariableOp" out_port_id="0"/>
+		<IR name="6194961952_const" out_port_id="0" id="576"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode2/truediv" out_port_id="0"/>
+		<IR name="fpn_cells/cell_1/fnode2/mul/Fused_Mul_" out_port_id="2" id="583"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode6/AddN_1" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode6/AddN_1/sum_2" out_port_id="2" id="612"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_13/se/conv2d/BiasAdd" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_13/se/conv2d/BiasAdd/Add" out_port_id="2" id="386"/>
+	</map>
+	<map>
+		<framework name="class_net/class-predict_4/separable_conv2d/ReadVariableOp" out_port_id="0"/>
+		<IR name="6205362056_const" out_port_id="0" id="1260"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode7/op_after_combine12/conv/separable_conv2d/ReadVariableOp" out_port_id="0"/>
+		<IR name="6208562088_const" out_port_id="0" id="1075"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_15/se/IdentityN" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_15/se/mul" out_port_id="1" id="443"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_15/se/mul" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_15/se/mul" out_port_id="1" id="443"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_7/conv2d/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_7/conv2d/Conv2D/Transpose45354_const" out_port_id="0" id="201"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode5/op_after_combine10/IdentityN" out_port_id="0"/>
+		<IR name="fpn_cells/cell_2/fnode5/op_after_combine10/mul" out_port_id="1" id="983"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode5/op_after_combine10/mul" out_port_id="0"/>
+		<IR name="fpn_cells/cell_2/fnode5/op_after_combine10/mul" out_port_id="1" id="983"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_11/tpu_batch_normalization/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_11/tpu_batch_normalization/FusedBatchNormV3/variance/Fused_Add_" out_port_id="2" id="319"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_9/se/Mean" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_9/se/Mean" out_port_id="2" id="267"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_13/IdentityN_1" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_13/mul_1" out_port_id="1" id="380"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_13/mul_1" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_13/mul_1" out_port_id="1" id="380"/>
+	</map>
+	<map>
+		<framework name="box_net/box-2-bn-4/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="box_net/box-2_1/BiasAdd/Add/Fused_Add_" out_port_id="2" id="962"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_3/IdentityN_1" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_3/mul_1" out_port_id="1" id="96"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_3/mul_1" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_3/mul_1" out_port_id="1" id="96"/>
+	</map>
+	<map>
+		<framework name="box_net/box-predict_3/separable_conv2d/depthwise" out_port_id="0"/>
+		<IR name="box_net/box-predict_3/separable_conv2d/depthwise" out_port_id="2" id="1059"/>
+	</map>
+	<map>
+		<framework name="box_net/box-predict_1/separable_conv2d/ReadVariableOp_1" out_port_id="0"/>
+		<IR name="box_net/box-predict_1/separable_conv2d/Transpose46024_const" out_port_id="0" id="966"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_15/se/conv2d_1/BiasAdd/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_15/se/conv2d_1/BiasAdd/ReadVariableOp/EltwiseUnsqueeze36518_const" out_port_id="0" id="446"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode4/op_after_combine9/IdentityN" out_port_id="0"/>
+		<IR name="fpn_cells/cell_2/fnode4/op_after_combine9/mul" out_port_id="1" id="936"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode4/op_after_combine9/mul" out_port_id="0"/>
+		<IR name="fpn_cells/cell_2/fnode4/op_after_combine9/mul" out_port_id="1" id="936"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode0/op_after_combine5/conv/separable_conv2d/depthwise" out_port_id="0"/>
+		<IR name="fpn_cells/cell_2/fnode0/op_after_combine5/conv/separable_conv2d/depthwise" out_port_id="2" id="819"/>
+	</map>
+	<map>
+		<framework name="class_net/class-0/separable_conv2d/depthwise" out_port_id="0"/>
+		<IR name="class_net/class-0/separable_conv2d/depthwise" out_port_id="2" id="1116"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode4/op_after_combine9/IdentityN" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode4/op_after_combine9/mul" out_port_id="1" id="575"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode4/op_after_combine9/mul" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode4/op_after_combine9/mul" out_port_id="1" id="575"/>
+	</map>
+	<map>
+		<framework name="class_net/class-0-bn-3/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="class_net/class-0/BiasAdd/Add/Fused_Add_" out_port_id="2" id="1120"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_14/se/conv2d_1/BiasAdd/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_14/se/conv2d_1/BiasAdd/ReadVariableOp/EltwiseUnsqueeze36534_const" out_port_id="0" id="418"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_8/se/conv2d_1/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_8/se/conv2d_1/Conv2D/Transpose45398_const" out_port_id="0" id="246"/>
+	</map>
+	<map>
+		<framework name="box_net/box-1_3/separable_conv2d/depthwise" out_port_id="0"/>
+		<IR name="box_net/box-1_3/separable_conv2d/depthwise" out_port_id="2" id="1045"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_1/IdentityN_1" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_1/mul_1" out_port_id="1" id="41"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_1/mul_1" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_1/mul_1" out_port_id="1" id="41"/>
+	</map>
+	<map>
+		<framework name="box_net/box-1-bn-4/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="box_net/box-1_1/BiasAdd/Add/Fused_Add_" out_port_id="2" id="955"/>
+	</map>
+	<map>
+		<framework name="class_net/class-1/separable_conv2d/ReadVariableOp_1" out_port_id="0"/>
+		<IR name="class_net/class-1/separable_conv2d/Transpose45816_const" out_port_id="0" id="1124"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode5/truediv_2" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode5/mul_2/Fused_Mul_" out_port_id="2" id="593"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_6/se/Mean" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_6/se/Mean" out_port_id="2" id="184"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_5/se/conv2d_1/Conv2D" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_5/se/conv2d_1/Conv2D" out_port_id="2" id="164"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode2/resample_1_6_7/resize/ResizeNearestNeighbor" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode2/resample_1_6_7/resize/ResizeNearestNeighbor" out_port_id="4" id="527"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_0/se/IdentityN" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_0/se/mul" out_port_id="1" id="21"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_0/se/mul" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_0/se/mul" out_port_id="1" id="21"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode4/truediv_1" out_port_id="0"/>
+		<IR name="fpn_cells/cell_1/fnode4/mul_1/Fused_Mul_" out_port_id="2" id="736"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_10/se/conv2d/Conv2D" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_10/se/conv2d/Conv2D" out_port_id="2" id="297"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_7/depthwise_conv2d/depthwise/ReadVariableOp" out_port_id="0"/>
+		<IR name="6195361956_const" out_port_id="0" id="206"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_15/tpu_batch_normalization/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_15/tpu_batch_normalization/FusedBatchNormV3/variance/Fused_Add_" out_port_id="2" id="430"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_5/se/conv2d/BiasAdd" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_5/se/conv2d/BiasAdd/Add" out_port_id="2" id="161"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode0/op_after_combine5/conv/separable_conv2d/ReadVariableOp_1" out_port_id="0"/>
+		<IR name="fpn_cells/cell_2/fnode0/op_after_combine5/conv/separable_conv2d/Transpose45744_const" out_port_id="0" id="820"/>
+	</map>
+	<map>
+		<framework name="box_net/box-predict_4/BiasAdd/ReadVariableOp" out_port_id="0"/>
+		<IR name="box_net/box-predict_4/BiasAdd/ReadVariableOp/EltwiseUnsqueeze36658_const" out_port_id="0" id="1106"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_13/conv2d/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_13/conv2d/Conv2D/Transpose45510_const" out_port_id="0" id="371"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode3/op_after_combine8/conv/separable_conv2d/ReadVariableOp_1" out_port_id="0"/>
+		<IR name="fpn_cells/cell_2/fnode3/op_after_combine8/conv/separable_conv2d/Transpose45768_const" out_port_id="0" id="892"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_5/se/IdentityN" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_5/se/mul" out_port_id="1" id="162"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_5/se/mul" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_5/se/mul" out_port_id="1" id="162"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_0/se/Mean" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_0/se/Mean" out_port_id="2" id="16"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_4/se/conv2d_1/Conv2D" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_4/se/conv2d_1/Conv2D" out_port_id="2" id="132"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode7/op_after_combine12/conv/separable_conv2d/ReadVariableOp_1" out_port_id="0"/>
+		<IR name="fpn_cells/cell_1/fnode7/op_after_combine12/conv/separable_conv2d/Transpose45736_const" out_port_id="0" id="796"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_1/se/mul_1" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_1/se/mul_1" out_port_id="2" id="54"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode1/op_after_combine6/IdentityN" out_port_id="0"/>
+		<IR name="fpn_cells/cell_2/fnode1/op_after_combine6/mul" out_port_id="1" id="841"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode1/op_after_combine6/mul" out_port_id="0"/>
+		<IR name="fpn_cells/cell_2/fnode1/op_after_combine6/mul" out_port_id="1" id="841"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode2/op_after_combine7/IdentityN" out_port_id="0"/>
+		<IR name="fpn_cells/cell_1/fnode2/op_after_combine7/mul" out_port_id="1" id="700"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode2/op_after_combine7/mul" out_port_id="0"/>
+		<IR name="fpn_cells/cell_1/fnode2/op_after_combine7/mul" out_port_id="1" id="700"/>
+	</map>
+	<map>
+		<framework name="class_net/class-predict_4/separable_conv2d/depthwise" out_port_id="0"/>
+		<IR name="class_net/class-predict_4/separable_conv2d/depthwise" out_port_id="2" id="1261"/>
+	</map>
+	<map>
+		<framework name="box_net/box-0_3/separable_conv2d/ReadVariableOp_1" out_port_id="0"/>
+		<IR name="box_net/box-0_3/separable_conv2d/Transpose46064_const" out_port_id="0" id="1039"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode7/resample_1_11_12/max_pooling2d_13/MaxPool" out_port_id="0"/>
+		<IR name="fpn_cells/cell_2/fnode7/resample_1_11_12/max_pooling2d_13/MaxPool" out_port_id="1" id="1070"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode1/op_after_combine6/bn/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode1/op_after_combine6/conv/BiasAdd/Add/Fused_Add_" out_port_id="2" id="513"/>
+	</map>
+	<map>
+		<framework name="box_net/box-1/separable_conv2d/depthwise" out_port_id="0"/>
+		<IR name="box_net/box-1/separable_conv2d/depthwise" out_port_id="2" id="904"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode2/resample_0_1_7/conv2d/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode2/resample_0_1_7/conv2d/Conv2D/Transpose45612_const" out_port_id="0" id="312"/>
+	</map>
+	<map>
+		<framework name="class_net/class-0_4/separable_conv2d/ReadVariableOp_1" out_port_id="0"/>
+		<IR name="class_net/class-0_4/separable_conv2d/Transpose45936_const" out_port_id="0" id="1241"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode3/op_after_combine8/conv/separable_conv2d/ReadVariableOp" out_port_id="0"/>
+		<IR name="6213762140_const" out_port_id="0" id="890"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode1/resample_1_5_6/resize/ResizeNearestNeighbor" out_port_id="0"/>
+		<IR name="fpn_cells/cell_1/fnode1/resample_1_5_6/resize/ResizeNearestNeighbor" out_port_id="4" id="672"/>
+	</map>
+	<map>
+		<framework name="box_net/box-2-bn-7/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="box_net/box-2_4/BiasAdd/Add/Fused_Add_" out_port_id="2" id="1100"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode2/op_after_combine7/conv/separable_conv2d/depthwise" out_port_id="0"/>
+		<IR name="fpn_cells/cell_2/fnode2/op_after_combine7/conv/separable_conv2d/depthwise" out_port_id="2" id="867"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode5/truediv_1" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode5/mul_1/Fused_Mul_" out_port_id="2" id="589"/>
+	</map>
+	<map>
+		<framework name="class_net/class-2_4/separable_conv2d/ReadVariableOp_1" out_port_id="0"/>
+		<IR name="class_net/class-2_4/separable_conv2d/Transpose45952_const" out_port_id="0" id="1255"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_2/conv2d/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_2/conv2d/Conv2D/Transpose45224_const" out_port_id="0" id="59"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_2/se/conv2d_1/Conv2D" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_2/se/conv2d_1/Conv2D" out_port_id="2" id="77"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_12/depthwise_conv2d/depthwise/ReadVariableOp" out_port_id="0"/>
+		<IR name="6203762040_const" out_port_id="0" id="348"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_1/se/conv2d/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_1/se/conv2d/Conv2D/Transpose45212_const" out_port_id="0" id="44"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode1/resample_1_5_6/resize/ResizeNearestNeighbor" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode1/resample_1_5_6/resize/ResizeNearestNeighbor" out_port_id="4" id="503"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_13/se/IdentityN" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_13/se/mul" out_port_id="1" id="387"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_13/se/mul" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_13/se/mul" out_port_id="1" id="387"/>
+	</map>
+	<map>
+		<framework name="box_net/IdentityN_5" out_port_id="0"/>
+		<IR name="box_net/mul_5" out_port_id="1" id="963"/>
+	</map>
+	<map>
+		<framework name="box_net/mul_5" out_port_id="0"/>
+		<IR name="box_net/mul_5" out_port_id="1" id="963"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_7/conv2d_1/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_7/conv2d_1/Conv2D/Transpose45376_const" out_port_id="0" id="224"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode4/truediv" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode4/resample_0_1_9/conv2d/BiasAdd/Add/Fused_Add_" out_port_id="2" id="567"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_6/se/conv2d/BiasAdd/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_6/se/conv2d/BiasAdd/ReadVariableOp/EltwiseUnsqueeze36542_const" out_port_id="0" id="187"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_12/se/conv2d/Conv2D" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_12/se/conv2d/Conv2D" out_port_id="2" id="356"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_15/IdentityN_1" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_15/mul_1" out_port_id="1" id="436"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_15/mul_1" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_15/mul_1" out_port_id="1" id="436"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode6/AddN_1" out_port_id="0"/>
+		<IR name="fpn_cells/cell_2/fnode6/AddN_1/sum_2" out_port_id="2" id="1029"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_13/depthwise_conv2d/depthwise/ReadVariableOp" out_port_id="0"/>
+		<IR name="6202162024_const" out_port_id="0" id="376"/>
+	</map>
+	<map>
+		<framework name="class_net/class-0_2/separable_conv2d/depthwise" out_port_id="0"/>
+		<IR name="class_net/class-0_2/separable_conv2d/depthwise" out_port_id="2" id="1178"/>
+	</map>
+	<map>
+		<framework name="box_net/box-0-bn-7/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="box_net/box-0_4/BiasAdd/Add/Fused_Add_" out_port_id="2" id="1086"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_6/tpu_batch_normalization_1/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_6/tpu_batch_normalization_1/FusedBatchNormV3/variance/Fused_Add_" out_port_id="2" id="181"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_12/Identity_2" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_12/tpu_batch_normalization_2/FusedBatchNormV3/variance/Fused_Add_" out_port_id="2" id="369"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_12/tpu_batch_normalization_2/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_12/tpu_batch_normalization_2/FusedBatchNormV3/variance/Fused_Add_" out_port_id="2" id="369"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode6/truediv_2" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode6/mul_2/Fused_Mul_" out_port_id="2" id="611"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_1/se/conv2d_1/BiasAdd" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_1/se/conv2d_1/BiasAdd/Add" out_port_id="2" id="52"/>
+	</map>
+	<map>
+		<framework name="box_net/box-1_4/separable_conv2d/ReadVariableOp" out_port_id="0"/>
+		<IR name="6192161924_const" out_port_id="0" id="1088"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_1/se/Sigmoid_1" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_1/se/Sigmoid_1" out_port_id="1" id="53"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode6/op_after_combine11/conv/separable_conv2d/ReadVariableOp_1" out_port_id="0"/>
+		<IR name="fpn_cells/cell_1/fnode6/op_after_combine11/conv/separable_conv2d/Transpose45728_const" out_port_id="0" id="781"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode5/op_after_combine10/conv/separable_conv2d/depthwise" out_port_id="0"/>
+		<IR name="fpn_cells/cell_1/fnode5/op_after_combine10/conv/separable_conv2d/depthwise" out_port_id="2" id="762"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_0/se/conv2d_1/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_0/se/conv2d_1/Conv2D/Transpose45190_const" out_port_id="0" id="22"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode3/op_after_combine8/conv/separable_conv2d/ReadVariableOp" out_port_id="0"/>
+		<IR name="6193761940_const" out_port_id="0" id="725"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_3/se/conv2d/Conv2D" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_3/se/conv2d/Conv2D" out_port_id="2" id="100"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode7/op_after_combine12/conv/separable_conv2d/ReadVariableOp_1" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode7/op_after_combine12/conv/separable_conv2d/Transpose45672_const" out_port_id="0" id="631"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_14/se/conv2d_1/BiasAdd" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_14/se/conv2d_1/BiasAdd/Add" out_port_id="2" id="419"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_14/se/conv2d_1/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_14/se/conv2d_1/Conv2D/Transpose45554_const" out_port_id="0" id="416"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_12/se/conv2d/BiasAdd" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_12/se/conv2d/BiasAdd/Add" out_port_id="2" id="358"/>
+	</map>
+	<map>
+		<framework name="box_net/box-predict/BiasAdd" out_port_id="0"/>
+		<IR name="box_net/box-predict/BiasAdd/Add/Transpose" out_port_id="2" id="924"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_7/Identity_2" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_7/tpu_batch_normalization_2/FusedBatchNormV3/variance/Fused_Add_" out_port_id="2" id="227"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_7/tpu_batch_normalization_2/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_7/tpu_batch_normalization_2/FusedBatchNormV3/variance/Fused_Add_" out_port_id="2" id="227"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode2/truediv_1" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode2/mul_1/Fused_Mul_" out_port_id="2" id="529"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode2/truediv" out_port_id="0"/>
+		<IR name="fpn_cells/cell_2/fnode2/mul/Fused_Mul_" out_port_id="2" id="750"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_15/Identity_2" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_15/tpu_batch_normalization_2/FusedBatchNormV3/variance/Fused_Add_" out_port_id="2" id="453"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_15/tpu_batch_normalization_2/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_15/tpu_batch_normalization_2/FusedBatchNormV3/variance/Fused_Add_" out_port_id="2" id="453"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_3/se/conv2d/BiasAdd/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_3/se/conv2d/BiasAdd/ReadVariableOp/EltwiseUnsqueeze36570_const" out_port_id="0" id="101"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode2/op_after_combine7/conv/separable_conv2d/depthwise" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode2/op_after_combine7/conv/separable_conv2d/depthwise" out_port_id="2" id="533"/>
+	</map>
+	<map>
+		<framework name="Reshape_9" out_port_id="0"/>
+		<IR name="Reshape_9" out_port_id="2" id="1111"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_11/se/conv2d_1/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_11/se/conv2d_1/Conv2D/Transpose45476_const" out_port_id="0" id="333"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode5/op_after_combine10/conv/separable_conv2d/ReadVariableOp" out_port_id="0"/>
+		<IR name="6188161884_const" out_port_id="0" id="761"/>
+	</map>
+	<map>
+		<framework name="box_net/IdentityN" out_port_id="0"/>
+		<IR name="box_net/mul" out_port_id="1" id="902"/>
+	</map>
+	<map>
+		<framework name="box_net/mul" out_port_id="0"/>
+		<IR name="box_net/mul" out_port_id="1" id="902"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode6/op_after_combine11/conv/separable_conv2d/depthwise" out_port_id="0"/>
+		<IR name="fpn_cells/cell_1/fnode6/op_after_combine11/conv/separable_conv2d/depthwise" out_port_id="2" id="780"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode6/op_after_combine11/conv/separable_conv2d/ReadVariableOp_1" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode6/op_after_combine11/conv/separable_conv2d/Transpose45664_const" out_port_id="0" id="616"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_13/se/conv2d_1/BiasAdd/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_13/se/conv2d_1/BiasAdd/ReadVariableOp/EltwiseUnsqueeze36642_const" out_port_id="0" id="390"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_8/se/conv2d_1/BiasAdd" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_8/se/conv2d_1/BiasAdd/Add" out_port_id="2" id="249"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode1/resample_1_5_6/resize/ResizeNearestNeighbor" out_port_id="0"/>
+		<IR name="fpn_cells/cell_2/fnode1/resample_1_5_6/resize/ResizeNearestNeighbor" out_port_id="4" id="837"/>
+	</map>
+	<map>
+		<framework name="Reshape_7/shape" out_port_id="0"/>
+		<IR name="Reshape_7/Cast_163442_const" out_port_id="0" id="1066"/>
+	</map>
+	<map>
+		<framework name="Reshape_4" out_port_id="0"/>
+		<IR name="Reshape_4" out_port_id="2" id="1207"/>
+	</map>
+	<map>
+		<framework name="class_net/class-0-bn-4/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="class_net/class-0_1/BiasAdd/Add/Fused_Add_" out_port_id="2" id="1151"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_12/tpu_batch_normalization_1/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_12/tpu_batch_normalization_1/FusedBatchNormV3/variance/Fused_Add_" out_port_id="2" id="351"/>
+	</map>
+	<map>
+		<framework name="box_net/box-predict_4/separable_conv2d/depthwise" out_port_id="0"/>
+		<IR name="box_net/box-predict_4/separable_conv2d/depthwise" out_port_id="2" id="1103"/>
+	</map>
+	<map>
+		<framework name="box_net/box-0/separable_conv2d/ReadVariableOp_1" out_port_id="0"/>
+		<IR name="box_net/box-0/separable_conv2d/Transpose45968_const" out_port_id="0" id="898"/>
+	</map>
+	<map>
+		<framework name="box_net/box-predict/separable_conv2d/ReadVariableOp_1" out_port_id="0"/>
+		<IR name="box_net/box-predict/separable_conv2d/Transpose45992_const" out_port_id="0" id="919"/>
+	</map>
+	<map>
+		<framework name="class_net/class-0-bn-5/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="class_net/class-0_2/BiasAdd/Add/Fused_Add_" out_port_id="2" id="1182"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode0/op_after_combine5/conv/separable_conv2d/ReadVariableOp" out_port_id="0"/>
+		<IR name="6207762080_const" out_port_id="0" id="653"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_11/tpu_batch_normalization_1/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_11/tpu_batch_normalization_1/FusedBatchNormV3/variance/Fused_Add_" out_port_id="2" id="324"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode6/resample_2_10_11/max_pooling2d_8/MaxPool" out_port_id="0"/>
+		<IR name="fpn_cells/cell_1/fnode6/resample_2_10_11/max_pooling2d_8/MaxPool" out_port_id="1" id="774"/>
+	</map>
+	<map>
+		<framework name="class_net/class-0_1/separable_conv2d/ReadVariableOp_1" out_port_id="0"/>
+		<IR name="class_net/class-0_1/separable_conv2d/Transpose45840_const" out_port_id="0" id="1148"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_4/se/conv2d/BiasAdd" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_4/se/conv2d/BiasAdd/Add" out_port_id="2" id="129"/>
+	</map>
+	<map>
+		<framework name="class_net/class-predict_4/separable_conv2d" out_port_id="0"/>
+		<IR name="class_net/class-predict_4/separable_conv2d" out_port_id="2" id="1263"/>
+	</map>
+	<map>
+		<framework name="box_net/box-predict_4/separable_conv2d" out_port_id="0"/>
+		<IR name="box_net/box-predict_4/separable_conv2d" out_port_id="2" id="1105"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_6/Add" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_6/Add" out_port_id="2" id="200"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode5/resample_2_9_10/max_pooling2d_11/MaxPool" out_port_id="0"/>
+		<IR name="fpn_cells/cell_2/fnode5/resample_2_9_10/max_pooling2d_11/MaxPool" out_port_id="1" id="979"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode2/op_after_combine7/bn/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="fpn_cells/cell_1/fnode2/op_after_combine7/conv/BiasAdd/Add/Fused_Add_" out_port_id="2" id="706"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode4/resample_0_1_9/conv2d/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode4/resample_0_1_9/conv2d/Conv2D/Transpose45636_const" out_port_id="0" id="564"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode6/op_after_combine11/bn/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode6/op_after_combine11/conv/BiasAdd/Add/Fused_Add_" out_port_id="2" id="619"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode4/resample_2_8_9/max_pooling2d_6/MaxPool" out_port_id="0"/>
+		<IR name="fpn_cells/cell_1/fnode4/resample_2_8_9/max_pooling2d_6/MaxPool" out_port_id="1" id="738"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode5/op_after_combine10/conv/separable_conv2d/ReadVariableOp_1" out_port_id="0"/>
+		<IR name="fpn_cells/cell_2/fnode5/op_after_combine10/conv/separable_conv2d/Transpose45784_const" out_port_id="0" id="986"/>
+	</map>
+	<map>
+		<framework name="class_net/class-0_4/separable_conv2d/depthwise" out_port_id="0"/>
+		<IR name="class_net/class-0_4/separable_conv2d/depthwise" out_port_id="2" id="1240"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_7/se/mul_1" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_7/se/mul_1" out_port_id="2" id="223"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_4/se/Mean" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_4/se/Mean" out_port_id="2" id="125"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_2/IdentityN_1" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_2/mul_1" out_port_id="1" id="68"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_2/mul_1" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_2/mul_1" out_port_id="1" id="68"/>
+	</map>
+	<map>
+		<framework name="box_net/box-2/separable_conv2d/ReadVariableOp" out_port_id="0"/>
+		<IR name="6195761960_const" out_port_id="0" id="910"/>
+	</map>
+	<map>
+		<framework name="box_net/box-2_1/separable_conv2d/ReadVariableOp_1" out_port_id="0"/>
+		<IR name="box_net/box-2_1/separable_conv2d/Transpose46016_const" out_port_id="0" id="959"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_2/se/conv2d_1/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_2/se/conv2d_1/Conv2D/Transpose45242_const" out_port_id="0" id="76"/>
+	</map>
+	<map>
+		<framework name="class_net/class-predict_1/BiasAdd/ReadVariableOp" out_port_id="0"/>
+		<IR name="class_net/class-predict_1/BiasAdd/ReadVariableOp/EltwiseUnsqueeze36610_const" out_port_id="0" id="1171"/>
+	</map>
+	<map>
+		<framework name="box_net/box-predict_3/separable_conv2d" out_port_id="0"/>
+		<IR name="box_net/box-predict_3/separable_conv2d" out_port_id="2" id="1061"/>
+	</map>
+	<map>
+		<framework name="class_net/class-2_1/separable_conv2d/ReadVariableOp_1" out_port_id="0"/>
+		<IR name="class_net/class-2_1/separable_conv2d/Transpose45856_const" out_port_id="0" id="1162"/>
+	</map>
+	<map>
+		<framework name="class_net/class-1/separable_conv2d/ReadVariableOp" out_port_id="0"/>
+		<IR name="6216962172_const" out_port_id="0" id="1122"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode5/AddN_1" out_port_id="0"/>
+		<IR name="fpn_cells/cell_1/fnode5/AddN_1/sum_2" out_port_id="2" id="759"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_3/se/conv2d_1/BiasAdd" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_3/se/conv2d_1/BiasAdd/Add" out_port_id="2" id="107"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_10/se/mul_1" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_10/se/mul_1" out_port_id="2" id="306"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode0/truediv_1" out_port_id="0"/>
+		<IR name="fpn_cells/cell_1/fnode0/mul_1/Fused_Mul_" out_port_id="2" id="650"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_5/depthwise_conv2d/depthwise/ReadVariableOp" out_port_id="0"/>
+		<IR name="6191761920_const" out_port_id="0" id="151"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_12/se/mul_1" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_12/se/mul_1" out_port_id="2" id="365"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode7/op_after_combine12/conv/separable_conv2d/depthwise" out_port_id="0"/>
+		<IR name="fpn_cells/cell_1/fnode7/op_after_combine12/conv/separable_conv2d/depthwise" out_port_id="2" id="795"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_0/Identity_1" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_0/tpu_batch_normalization_1/FusedBatchNormV3/variance/Fused_Add_" out_port_id="2" id="31"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_0/tpu_batch_normalization_1/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_0/tpu_batch_normalization_1/FusedBatchNormV3/variance/Fused_Add_" out_port_id="2" id="31"/>
+	</map>
+	<map>
+		<framework name="box_net/box-0/separable_conv2d/ReadVariableOp" out_port_id="0"/>
+		<IR name="6193361936_const" out_port_id="0" id="896"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_3/se/conv2d/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_3/se/conv2d/Conv2D/Transpose45264_const" out_port_id="0" id="99"/>
+	</map>
+	<map>
+		<framework name="resample_p6/max_pooling2d/MaxPool" out_port_id="0"/>
+		<IR name="resample_p6/max_pooling2d/MaxPool" out_port_id="1" id="462"/>
+	</map>
+	<map>
+		<framework name="box_net/box-2/separable_conv2d/depthwise" out_port_id="0"/>
+		<IR name="box_net/box-2/separable_conv2d/depthwise" out_port_id="2" id="911"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_2/se/IdentityN" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_2/se/mul" out_port_id="1" id="75"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_2/se/mul" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_2/se/mul" out_port_id="1" id="75"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_3/se/Mean" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_3/se/Mean" out_port_id="2" id="98"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_10/Identity_2" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_10/tpu_batch_normalization_2/FusedBatchNormV3/variance/Fused_Add_" out_port_id="2" id="310"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_10/tpu_batch_normalization_2/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_10/tpu_batch_normalization_2/FusedBatchNormV3/variance/Fused_Add_" out_port_id="2" id="310"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_11/se/conv2d/BiasAdd/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_11/se/conv2d/BiasAdd/ReadVariableOp/EltwiseUnsqueeze36630_const" out_port_id="0" id="330"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode4/truediv" out_port_id="0"/>
+		<IR name="fpn_cells/cell_1/fnode4/mul/Fused_Mul_" out_port_id="2" id="734"/>
+	</map>
+	<map>
+		<framework name="class_net/class-1_4/separable_conv2d/ReadVariableOp" out_port_id="0"/>
+		<IR name="6186561868_const" out_port_id="0" id="1246"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_0/IdentityN" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_0/mul" out_port_id="1" id="14"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_0/mul" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_0/mul" out_port_id="1" id="14"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_13/tpu_batch_normalization_1/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_13/tpu_batch_normalization_1/FusedBatchNormV3/variance/Fused_Add_" out_port_id="2" id="379"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_13/se/conv2d/BiasAdd/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_13/se/conv2d/BiasAdd/ReadVariableOp/EltwiseUnsqueeze36622_const" out_port_id="0" id="385"/>
+	</map>
+	<map>
+		<framework name="class_net/class-2_4/separable_conv2d/depthwise" out_port_id="0"/>
+		<IR name="class_net/class-2_4/separable_conv2d/depthwise" out_port_id="2" id="1254"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode1/op_after_combine6/IdentityN" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode1/op_after_combine6/mul" out_port_id="1" id="507"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode1/op_after_combine6/mul" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode1/op_after_combine6/mul" out_port_id="1" id="507"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_9/se/conv2d/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_9/se/conv2d/Conv2D/Transpose45420_const" out_port_id="0" id="268"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_3/se/mul_1" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_3/se/mul_1" out_port_id="2" id="109"/>
+	</map>
+	<map>
+		<framework name="Reshape_2" out_port_id="0"/>
+		<IR name="Reshape_2" out_port_id="2" id="1176"/>
+	</map>
+	<map>
+		<framework name="class_net/class-2-bn-7/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="class_net/class-2_4/BiasAdd/Add/Fused_Add_" out_port_id="2" id="1258"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_1/se/conv2d_1/BiasAdd/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_1/se/conv2d_1/BiasAdd/ReadVariableOp/EltwiseUnsqueeze36538_const" out_port_id="0" id="51"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_2/depthwise_conv2d/depthwise/ReadVariableOp" out_port_id="0"/>
+		<IR name="6200162004_const" out_port_id="0" id="64"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_7/se/conv2d/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_7/se/conv2d/Conv2D/Transpose45368_const" out_port_id="0" id="213"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode7/resample_1_11_12/max_pooling2d_9/MaxPool" out_port_id="0"/>
+		<IR name="fpn_cells/cell_1/fnode7/resample_1_11_12/max_pooling2d_9/MaxPool" out_port_id="1" id="789"/>
+	</map>
+	<map>
+		<framework name="box_net/box-0-bn-5/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="box_net/box-0_2/BiasAdd/Add/Fused_Add_" out_port_id="2" id="995"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_13/tpu_batch_normalization/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_13/tpu_batch_normalization/FusedBatchNormV3/variance/Fused_Add_" out_port_id="2" id="374"/>
+	</map>
+	<map>
+		<framework name="class_net/IdentityN_13" out_port_id="0"/>
+		<IR name="class_net/mul_13" out_port_id="1" id="1252"/>
+	</map>
+	<map>
+		<framework name="class_net/mul_13" out_port_id="0"/>
+		<IR name="class_net/mul_13" out_port_id="1" id="1252"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_3/tpu_batch_normalization/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_3/tpu_batch_normalization/FusedBatchNormV3/variance/Fused_Add_" out_port_id="2" id="90"/>
+	</map>
+	<map>
+		<framework name="box_net/box-predict_1/separable_conv2d" out_port_id="0"/>
+		<IR name="box_net/box-predict_1/separable_conv2d" out_port_id="2" id="967"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_1/Identity_2" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_1/tpu_batch_normalization_2/FusedBatchNormV3/variance/Fused_Add_" out_port_id="2" id="58"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_1/tpu_batch_normalization_2/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_1/tpu_batch_normalization_2/FusedBatchNormV3/variance/Fused_Add_" out_port_id="2" id="58"/>
+	</map>
+	<map>
+		<framework name="class_net/class-1_1/separable_conv2d/depthwise" out_port_id="0"/>
+		<IR name="class_net/class-1_1/separable_conv2d/depthwise" out_port_id="2" id="1154"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode3/resample_1_7_8/resize/size" out_port_id="0"/>
+		<IR name="fpn_cells/cell_1/fnode3/resample_1_7_8/resize/ResizeNearestNeighbor/Cast_163382_const" out_port_id="0" id="707"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode6/resample_2_10_11/max_pooling2d_4/MaxPool" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode6/resample_2_10_11/max_pooling2d_4/MaxPool" out_port_id="1" id="609"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_6/se/Sigmoid_1" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_6/se/Sigmoid_1" out_port_id="1" id="194"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_0/se/conv2d_1/BiasAdd/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_0/se/conv2d_1/BiasAdd/ReadVariableOp/EltwiseUnsqueeze36574_const" out_port_id="0" id="24"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_14/se/conv2d/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_14/se/conv2d/Conv2D/Transpose45550_const" out_port_id="0" id="411"/>
+	</map>
+	<map>
+		<framework name="class_net/class-predict_3/separable_conv2d" out_port_id="0"/>
+		<IR name="class_net/class-predict_3/separable_conv2d" out_port_id="2" id="1232"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_9/se/conv2d_1/BiasAdd/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_9/se/conv2d_1/BiasAdd/ReadVariableOp/EltwiseUnsqueeze36638_const" out_port_id="0" id="275"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode7/op_after_combine12/bn/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="fpn_cells/cell_2/fnode7/op_after_combine12/conv/BiasAdd/Add/Fused_Add_" out_port_id="2" id="1080"/>
+	</map>
+	<map>
+		<framework name="class_net/IdentityN_14" out_port_id="0"/>
+		<IR name="class_net/mul_14" out_port_id="1" id="1259"/>
+	</map>
+	<map>
+		<framework name="class_net/mul_14" out_port_id="0"/>
+		<IR name="class_net/mul_14" out_port_id="1" id="1259"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_4/Identity_2" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_4/tpu_batch_normalization_2/FusedBatchNormV3/variance/Fused_Add_" out_port_id="2" id="140"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_4/tpu_batch_normalization_2/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_4/tpu_batch_normalization_2/FusedBatchNormV3/variance/Fused_Add_" out_port_id="2" id="140"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_5/se/conv2d_1/BiasAdd/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_5/se/conv2d_1/BiasAdd/ReadVariableOp/EltwiseUnsqueeze36618_const" out_port_id="0" id="165"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_15/se/Mean" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_15/se/Mean" out_port_id="2" id="438"/>
+	</map>
+	<map>
+		<framework name="class_net/class-0_4/separable_conv2d/ReadVariableOp" out_port_id="0"/>
+		<IR name="6203362036_const" out_port_id="0" id="1239"/>
+	</map>
+	<map>
+		<framework name="class_net/class-0/separable_conv2d/ReadVariableOp_1" out_port_id="0"/>
+		<IR name="class_net/class-0/separable_conv2d/Transpose45808_const" out_port_id="0" id="1117"/>
+	</map>
+	<map>
+		<framework name="box_net/box-2-bn-6/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="box_net/box-2_3/BiasAdd/Add/Fused_Add_" out_port_id="2" id="1056"/>
+	</map>
+	<map>
+		<framework name="box_net/box-2_4/separable_conv2d/ReadVariableOp" out_port_id="0"/>
+		<IR name="6198961992_const" out_port_id="0" id="1095"/>
+	</map>
+	<map>
+		<framework name="box_net/box-predict_2/BiasAdd/ReadVariableOp" out_port_id="0"/>
+		<IR name="box_net/box-predict_2/BiasAdd/ReadVariableOp/EltwiseUnsqueeze36650_const" out_port_id="0" id="1015"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_5/IdentityN" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_5/mul" out_port_id="1" id="150"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_5/mul" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_5/mul" out_port_id="1" id="150"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_13/se/conv2d/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_13/se/conv2d/Conv2D/Transpose45524_const" out_port_id="0" id="383"/>
+	</map>
+	<map>
+		<framework name="class_net/class-0_1/separable_conv2d/ReadVariableOp" out_port_id="0"/>
+		<IR name="6190961912_const" out_port_id="0" id="1146"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode3/resample_1_7_8/resize/size" out_port_id="0"/>
+		<IR name="fpn_cells/cell_2/fnode3/resample_1_7_8/resize/ResizeNearestNeighbor/Cast_163372_const" out_port_id="0" id="872"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode7/op_after_combine12/conv/separable_conv2d/ReadVariableOp" out_port_id="0"/>
+		<IR name="6198561988_const" out_port_id="0" id="794"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_0/se/Sigmoid_1" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_0/se/Sigmoid_1" out_port_id="1" id="26"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_4/se/conv2d/Conv2D" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_4/se/conv2d/Conv2D" out_port_id="2" id="127"/>
+	</map>
+	<map>
+		<framework name="Reshape_5/shape" out_port_id="0"/>
+		<IR name="Reshape_5/Cast_163490_const" out_port_id="0" id="1019"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_13/se/conv2d_1/BiasAdd" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_13/se/conv2d_1/BiasAdd/Add" out_port_id="2" id="391"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_4/IdentityN" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_4/mul" out_port_id="1" id="118"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_4/mul" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_4/mul" out_port_id="1" id="118"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_10/se/Sigmoid_1" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_10/se/Sigmoid_1" out_port_id="1" id="305"/>
+	</map>
+	<map>
+		<framework name="class_net/IdentityN" out_port_id="0"/>
+		<IR name="class_net/mul" out_port_id="1" id="1121"/>
+	</map>
+	<map>
+		<framework name="class_net/mul" out_port_id="0"/>
+		<IR name="class_net/mul" out_port_id="1" id="1121"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_12/se/conv2d_1/BiasAdd/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_12/se/conv2d_1/BiasAdd/ReadVariableOp/EltwiseUnsqueeze36550_const" out_port_id="0" id="362"/>
+	</map>
+	<map>
+		<framework name="box_net/box-2-bn-5/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="box_net/box-2_2/BiasAdd/Add/Fused_Add_" out_port_id="2" id="1009"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_1/se/IdentityN" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_1/se/mul" out_port_id="1" id="48"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_1/se/mul" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_1/se/mul" out_port_id="1" id="48"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_12/se/conv2d/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_12/se/conv2d/Conv2D/Transpose45498_const" out_port_id="0" id="355"/>
+	</map>
+	<map>
+		<framework name="class_net/IdentityN_7" out_port_id="0"/>
+		<IR name="class_net/mul_7" out_port_id="1" id="1190"/>
+	</map>
+	<map>
+		<framework name="class_net/mul_7" out_port_id="0"/>
+		<IR name="class_net/mul_7" out_port_id="1" id="1190"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_9/depthwise_conv2d/depthwise/ReadVariableOp" out_port_id="0"/>
+		<IR name="6188561888_const" out_port_id="0" id="261"/>
+	</map>
+	<map>
+		<framework name="class_net/class-2/separable_conv2d/ReadVariableOp_1" out_port_id="0"/>
+		<IR name="class_net/class-2/separable_conv2d/Transpose45824_const" out_port_id="0" id="1131"/>
+	</map>
+	<map>
+		<framework name="class_net/class-1-bn-5/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="class_net/class-1_2/BiasAdd/Add/Fused_Add_" out_port_id="2" id="1189"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode4/op_after_combine9/bn/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="fpn_cells/cell_2/fnode4/op_after_combine9/conv/BiasAdd/Add/Fused_Add_" out_port_id="2" id="942"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode5/resample_0_2_10/conv2d/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode5/resample_0_2_10/conv2d/Conv2D/Transpose45648_const" out_port_id="0" id="584"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_9/se/mul_1" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_9/se/mul_1" out_port_id="2" id="278"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_10/tpu_batch_normalization/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_10/tpu_batch_normalization/FusedBatchNormV3/variance/Fused_Add_" out_port_id="2" id="287"/>
+	</map>
+	<map>
+		<framework name="resample_p6/bn/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="resample_p6/conv2d/BiasAdd/Add/Fused_Add_" out_port_id="2" id="461"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_11/se/conv2d/Conv2D" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_11/se/conv2d/Conv2D" out_port_id="2" id="329"/>
+	</map>
+	<map>
+		<framework name="box_net/box-2_3/separable_conv2d/depthwise" out_port_id="0"/>
+		<IR name="box_net/box-2_3/separable_conv2d/depthwise" out_port_id="2" id="1052"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_5/Identity_2" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_5/tpu_batch_normalization_2/FusedBatchNormV3/variance/Fused_Add_" out_port_id="2" id="172"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_5/tpu_batch_normalization_2/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_5/tpu_batch_normalization_2/FusedBatchNormV3/variance/Fused_Add_" out_port_id="2" id="172"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_11/se/conv2d_1/BiasAdd" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_11/se/conv2d_1/BiasAdd/Add" out_port_id="2" id="336"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_7/IdentityN_1" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_7/mul_1" out_port_id="1" id="210"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_7/mul_1" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_7/mul_1" out_port_id="1" id="210"/>
+	</map>
+	<map>
+		<framework name="box_net/box-predict/separable_conv2d/depthwise" out_port_id="0"/>
+		<IR name="box_net/box-predict/separable_conv2d/depthwise" out_port_id="2" id="918"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode5/truediv_1" out_port_id="0"/>
+		<IR name="fpn_cells/cell_2/fnode5/mul_1/Fused_Mul_" out_port_id="2" id="977"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode2/op_after_combine7/bn/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode2/op_after_combine7/conv/BiasAdd/Add/Fused_Add_" out_port_id="2" id="537"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_12/se/conv2d_1/Conv2D" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_12/se/conv2d_1/Conv2D" out_port_id="2" id="361"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_12/se/Mean" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_12/se/Mean" out_port_id="2" id="354"/>
+	</map>
+	<map>
+		<framework name="box_net/box-1_4/separable_conv2d/ReadVariableOp_1" out_port_id="0"/>
+		<IR name="box_net/box-1_4/separable_conv2d/Transpose46104_const" out_port_id="0" id="1090"/>
+	</map>
+	<map>
+		<framework name="box_net/box-predict/separable_conv2d" out_port_id="0"/>
+		<IR name="box_net/box-predict/separable_conv2d" out_port_id="2" id="920"/>
+	</map>
+	<map>
+		<framework name="box_net/box-1_2/separable_conv2d/ReadVariableOp" out_port_id="0"/>
+		<IR name="6212962132_const" out_port_id="0" id="997"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_7/se/conv2d_1/Conv2D" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_7/se/conv2d_1/Conv2D" out_port_id="2" id="219"/>
+	</map>
+	<map>
+		<framework name="box_net/box-0/separable_conv2d/depthwise" out_port_id="0"/>
+		<IR name="box_net/box-0/separable_conv2d/depthwise" out_port_id="2" id="897"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_13/Add" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_13/Add" out_port_id="2" id="398"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode0/truediv_1" out_port_id="0"/>
+		<IR name="fpn_cells/cell_2/fnode0/mul_1/Fused_Mul_" out_port_id="2" id="815"/>
+	</map>
+	<map>
+		<framework name="box_net/box-1_2/separable_conv2d/ReadVariableOp_1" out_port_id="0"/>
+		<IR name="box_net/box-1_2/separable_conv2d/Transpose46040_const" out_port_id="0" id="999"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode1/op_after_combine6/conv/separable_conv2d/ReadVariableOp_1" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode1/op_after_combine6/conv/separable_conv2d/Transpose45608_const" out_port_id="0" id="510"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode6/resample_2_10_11/max_pooling2d_12/MaxPool" out_port_id="0"/>
+		<IR name="fpn_cells/cell_2/fnode6/resample_2_10_11/max_pooling2d_12/MaxPool" out_port_id="1" id="1026"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode5/resample_2_9_10/max_pooling2d_3/MaxPool" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode5/resample_2_9_10/max_pooling2d_3/MaxPool" out_port_id="1" id="591"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode5/op_after_combine10/IdentityN" out_port_id="0"/>
+		<IR name="fpn_cells/cell_1/fnode5/op_after_combine10/mul" out_port_id="1" id="760"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode5/op_after_combine10/mul" out_port_id="0"/>
+		<IR name="fpn_cells/cell_1/fnode5/op_after_combine10/mul" out_port_id="1" id="760"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_2/Add" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_2/Add" out_port_id="2" id="86"/>
+	</map>
+	<map>
+		<framework name="class_net/class-predict_2/separable_conv2d/depthwise" out_port_id="0"/>
+		<IR name="class_net/class-predict_2/separable_conv2d/depthwise" out_port_id="2" id="1199"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode5/resample_2_9_10/max_pooling2d_7/MaxPool" out_port_id="0"/>
+		<IR name="fpn_cells/cell_1/fnode5/resample_2_9_10/max_pooling2d_7/MaxPool" out_port_id="1" id="756"/>
+	</map>
+	<map>
+		<framework name="class_net/class-1-bn-7/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="class_net/class-1_4/BiasAdd/Add/Fused_Add_" out_port_id="2" id="1251"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode4/op_after_combine9/bn/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode4/op_after_combine9/conv/BiasAdd/Add/Fused_Add_" out_port_id="2" id="581"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode5/op_after_combine10/bn/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="fpn_cells/cell_2/fnode5/op_after_combine10/conv/BiasAdd/Add/Fused_Add_" out_port_id="2" id="989"/>
+	</map>
+	<map>
+		<framework name="Reshape_1/shape" out_port_id="0"/>
+		<IR name="Reshape_1/Cast_163342_const" out_port_id="0" id="925"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_5/se/conv2d/Conv2D" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_5/se/conv2d/Conv2D" out_port_id="2" id="159"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_7/IdentityN" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_7/mul" out_port_id="1" id="205"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_7/mul" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_7/mul" out_port_id="1" id="205"/>
+	</map>
+	<map>
+		<framework name="box_net/IdentityN_6" out_port_id="0"/>
+		<IR name="box_net/mul_6" out_port_id="1" id="996"/>
+	</map>
+	<map>
+		<framework name="box_net/mul_6" out_port_id="0"/>
+		<IR name="box_net/mul_6" out_port_id="1" id="996"/>
+	</map>
+	<map>
+		<framework name="box_net/box-2_4/separable_conv2d/ReadVariableOp_1" out_port_id="0"/>
+		<IR name="box_net/box-2_4/separable_conv2d/Transpose46112_const" out_port_id="0" id="1097"/>
+	</map>
+	<map>
+		<framework name="class_net/IdentityN_3" out_port_id="0"/>
+		<IR name="class_net/mul_3" out_port_id="1" id="1152"/>
+	</map>
+	<map>
+		<framework name="class_net/mul_3" out_port_id="0"/>
+		<IR name="class_net/mul_3" out_port_id="1" id="1152"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_14/Identity_2" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_14/tpu_batch_normalization_2/FusedBatchNormV3/variance/Fused_Add_" out_port_id="2" id="425"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_14/tpu_batch_normalization_2/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_14/tpu_batch_normalization_2/FusedBatchNormV3/variance/Fused_Add_" out_port_id="2" id="425"/>
+	</map>
+	<map>
+		<framework name="class_net/class-0-bn-6/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="class_net/class-0_3/BiasAdd/Add/Fused_Add_" out_port_id="2" id="1213"/>
+	</map>
+	<map>
+		<framework name="class_net/class-predict/separable_conv2d/ReadVariableOp_1" out_port_id="0"/>
+		<IR name="class_net/class-predict/separable_conv2d/Transpose45832_const" out_port_id="0" id="1138"/>
+	</map>
+	<map>
+		<framework name="Reshape_6" out_port_id="0"/>
+		<IR name="Reshape_6" out_port_id="2" id="1238"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode4/op_after_combine9/conv/separable_conv2d/ReadVariableOp" out_port_id="0"/>
+		<IR name="6208162084_const" out_port_id="0" id="743"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_15/tpu_batch_normalization_1/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_15/tpu_batch_normalization_1/FusedBatchNormV3/variance/Fused_Add_" out_port_id="2" id="435"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_10/conv2d/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_10/conv2d/Conv2D/Transpose45432_const" out_port_id="0" id="284"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode5/truediv" out_port_id="0"/>
+		<IR name="fpn_cells/cell_2/fnode5/mul/Fused_Mul_" out_port_id="2" id="975"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode6/truediv_2" out_port_id="0"/>
+		<IR name="fpn_cells/cell_2/fnode6/mul_2/Fused_Mul_" out_port_id="2" id="1028"/>
+	</map>
+	<map>
+		<framework name="class_net/class-predict_1/separable_conv2d/depthwise" out_port_id="0"/>
+		<IR name="class_net/class-predict_1/separable_conv2d/depthwise" out_port_id="2" id="1168"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_4/se/conv2d_1/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_4/se/conv2d_1/Conv2D/Transpose45294_const" out_port_id="0" id="131"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode1/op_after_combine6/conv/separable_conv2d/ReadVariableOp" out_port_id="0"/>
+		<IR name="6191361916_const" out_port_id="0" id="677"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_5/tpu_batch_normalization_1/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_5/tpu_batch_normalization_1/FusedBatchNormV3/variance/Fused_Add_" out_port_id="2" id="154"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode1/op_after_combine6/conv/separable_conv2d/ReadVariableOp_1" out_port_id="0"/>
+		<IR name="fpn_cells/cell_2/fnode1/op_after_combine6/conv/separable_conv2d/Transpose45752_const" out_port_id="0" id="844"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_6/se/conv2d_1/BiasAdd" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_6/se/conv2d_1/BiasAdd/Add" out_port_id="2" id="193"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode1/truediv_1" out_port_id="0"/>
+		<IR name="fpn_cells/cell_1/fnode1/mul_1/Fused_Mul_" out_port_id="2" id="674"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode7/AddN_1" out_port_id="0"/>
+		<IR name="fpn_cells/cell_1/fnode7/AddN_1/sum_1" out_port_id="2" id="792"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_6/depthwise_conv2d/depthwise/ReadVariableOp" out_port_id="0"/>
+		<IR name="6201362016_const" out_port_id="0" id="178"/>
+	</map>
+	<map>
+		<framework name="class_net/class-0-bn-7/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="class_net/class-0_4/BiasAdd/Add/Fused_Add_" out_port_id="2" id="1244"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_7/se/conv2d_1/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_7/se/conv2d_1/Conv2D/Transpose45372_const" out_port_id="0" id="218"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_10/se/conv2d/BiasAdd/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_10/se/conv2d/BiasAdd/ReadVariableOp/EltwiseUnsqueeze36626_const" out_port_id="0" id="298"/>
+	</map>
+	<map>
+		<framework name="class_net/class-predict_2/BiasAdd/ReadVariableOp" out_port_id="0"/>
+		<IR name="class_net/class-predict_2/BiasAdd/ReadVariableOp/EltwiseUnsqueeze36594_const" out_port_id="0" id="1202"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode2/op_after_combine7/conv/separable_conv2d/ReadVariableOp_1" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode2/op_after_combine7/conv/separable_conv2d/Transpose45620_const" out_port_id="0" id="534"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_2/se/conv2d/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_2/se/conv2d/Conv2D/Transpose45238_const" out_port_id="0" id="71"/>
+	</map>
+	<map>
+		<framework name="box_net/box-1-bn-6/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="box_net/box-1_3/BiasAdd/Add/Fused_Add_" out_port_id="2" id="1049"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_2/se/conv2d/Conv2D" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_2/se/conv2d/Conv2D" out_port_id="2" id="72"/>
+	</map>
+	<map>
+		<framework name="box_net/box-0_1/separable_conv2d/ReadVariableOp" out_port_id="0"/>
+		<IR name="6197361976_const" out_port_id="0" id="943"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode0/op_after_combine5/bn/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode0/op_after_combine5/conv/BiasAdd/Add/Fused_Add_" out_port_id="2" id="489"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode4/op_after_combine9/conv/separable_conv2d/ReadVariableOp" out_port_id="0"/>
+		<IR name="6214562148_const" out_port_id="0" id="937"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_7/se/Sigmoid_1" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_7/se/Sigmoid_1" out_port_id="1" id="222"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode7/truediv" out_port_id="0"/>
+		<IR name="fpn_cells/cell_2/fnode7/mul/Fused_Mul_" out_port_id="2" id="1069"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode2/truediv_1" out_port_id="0"/>
+		<IR name="fpn_cells/cell_1/fnode2/mul_1/Fused_Mul_" out_port_id="2" id="698"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_4/se/IdentityN" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_4/se/mul" out_port_id="1" id="130"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_4/se/mul" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_4/se/mul" out_port_id="1" id="130"/>
+	</map>
+	<map>
+		<framework name="class_net/class-predict_1/separable_conv2d/ReadVariableOp" out_port_id="0"/>
+		<IR name="6190161904_const" out_port_id="0" id="1167"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode7/truediv" out_port_id="0"/>
+		<IR name="fpn_cells/cell_1/fnode7/mul/Fused_Mul_" out_port_id="2" id="788"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_7/se/IdentityN" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_7/se/mul" out_port_id="1" id="217"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_7/se/mul" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_7/se/mul" out_port_id="1" id="217"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode4/truediv_2" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode4/mul_2/Fused_Mul_" out_port_id="2" id="573"/>
+	</map>
+	<map>
+		<framework name="class_net/class-predict_1/BiasAdd" out_port_id="0"/>
+		<IR name="class_net/class-predict_1/BiasAdd/Add/Transpose" out_port_id="2" id="1174"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_10/IdentityN_1" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_10/mul_1" out_port_id="1" id="293"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_10/mul_1" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_10/mul_1" out_port_id="1" id="293"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode6/truediv_2" out_port_id="0"/>
+		<IR name="fpn_cells/cell_1/fnode6/mul_2/Fused_Mul_" out_port_id="2" id="776"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_5/conv2d/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_5/conv2d/Conv2D/Transpose45302_const" out_port_id="0" id="146"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_3/se/conv2d_1/BiasAdd/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_3/se/conv2d_1/BiasAdd/ReadVariableOp/EltwiseUnsqueeze36634_const" out_port_id="0" id="106"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_3/tpu_batch_normalization_1/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_3/tpu_batch_normalization_1/FusedBatchNormV3/variance/Fused_Add_" out_port_id="2" id="95"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode3/op_after_combine8/IdentityN" out_port_id="0"/>
+		<IR name="fpn_cells/cell_1/fnode3/op_after_combine8/mul" out_port_id="1" id="724"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode3/op_after_combine8/mul" out_port_id="0"/>
+		<IR name="fpn_cells/cell_1/fnode3/op_after_combine8/mul" out_port_id="1" id="724"/>
+	</map>
+	<map>
+		<framework name="box_net/box-predict_2/separable_conv2d/ReadVariableOp" out_port_id="0"/>
+		<IR name="6212562128_const" out_port_id="0" id="1011"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/stem/tpu_batch_normalization/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="efficientnet-b0/stem/tpu_batch_normalization/FusedBatchNormV3/variance/Fused_Add_" out_port_id="2" id="8"/>
+	</map>
+	<map>
+		<framework name="class_net/class-0_3/separable_conv2d/depthwise" out_port_id="0"/>
+		<IR name="class_net/class-0_3/separable_conv2d/depthwise" out_port_id="2" id="1209"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_11/se/Sigmoid_1" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_11/se/Sigmoid_1" out_port_id="1" id="337"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode0/op_after_combine5/IdentityN" out_port_id="0"/>
+		<IR name="fpn_cells/cell_2/fnode0/op_after_combine5/mul" out_port_id="1" id="817"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode0/op_after_combine5/mul" out_port_id="0"/>
+		<IR name="fpn_cells/cell_2/fnode0/op_after_combine5/mul" out_port_id="1" id="817"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode3/truediv" out_port_id="0"/>
+		<IR name="fpn_cells/cell_1/fnode3/mul/Fused_Mul_" out_port_id="2" id="563"/>
+	</map>
+	<map>
+		<framework name="class_net/class-1-bn-3/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="class_net/class-1/BiasAdd/Add/Fused_Add_" out_port_id="2" id="1127"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_9/Identity_2" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_9/tpu_batch_normalization_2/FusedBatchNormV3/variance/Fused_Add_" out_port_id="2" id="282"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_9/tpu_batch_normalization_2/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_9/tpu_batch_normalization_2/FusedBatchNormV3/variance/Fused_Add_" out_port_id="2" id="282"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_3/se/Sigmoid_1" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_3/se/Sigmoid_1" out_port_id="1" id="108"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode4/op_after_combine9/conv/separable_conv2d/depthwise" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode4/op_after_combine9/conv/separable_conv2d/depthwise" out_port_id="2" id="577"/>
+	</map>
+	<map>
+		<framework name="box_net/box-2_2/separable_conv2d/ReadVariableOp_1" out_port_id="0"/>
+		<IR name="box_net/box-2_2/separable_conv2d/Transpose46048_const" out_port_id="0" id="1006"/>
+	</map>
+	<map>
+		<framework name="box_net/box-2_1/separable_conv2d/ReadVariableOp" out_port_id="0"/>
+		<IR name="6205762060_const" out_port_id="0" id="957"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode3/op_after_combine8/conv/separable_conv2d/ReadVariableOp" out_port_id="0"/>
+		<IR name="6215362156_const" out_port_id="0" id="556"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_3/se/conv2d/BiasAdd" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_3/se/conv2d/BiasAdd/Add" out_port_id="2" id="102"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode7/AddN_1" out_port_id="0"/>
+		<IR name="fpn_cells/cell_2/fnode7/AddN_1/sum_1" out_port_id="2" id="1073"/>
+	</map>
+	<map>
+		<framework name="class_net/class-0_2/separable_conv2d/ReadVariableOp_1" out_port_id="0"/>
+		<IR name="class_net/class-0_2/separable_conv2d/Transpose45872_const" out_port_id="0" id="1179"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode6/op_after_combine11/conv/separable_conv2d/ReadVariableOp" out_port_id="0"/>
+		<IR name="6209762100_const" out_port_id="0" id="779"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_5/se/conv2d/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_5/se/conv2d/Conv2D/Transpose45316_const" out_port_id="0" id="158"/>
+	</map>
+	<map>
+		<framework name="box_net/box-predict/BiasAdd/ReadVariableOp" out_port_id="0"/>
+		<IR name="box_net/box-predict/BiasAdd/ReadVariableOp/EltwiseUnsqueeze36582_const" out_port_id="0" id="921"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_11/IdentityN" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_11/mul" out_port_id="1" id="320"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_11/mul" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_11/mul" out_port_id="1" id="320"/>
+	</map>
+	<map>
+		<framework name="class_net/class-1-bn-4/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="class_net/class-1_1/BiasAdd/Add/Fused_Add_" out_port_id="2" id="1158"/>
+	</map>
+	<map>
+		<framework name="box_net/IdentityN_7" out_port_id="0"/>
+		<IR name="box_net/mul_7" out_port_id="1" id="1003"/>
+	</map>
+	<map>
+		<framework name="box_net/mul_7" out_port_id="0"/>
+		<IR name="box_net/mul_7" out_port_id="1" id="1003"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_14/tpu_batch_normalization_1/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_14/tpu_batch_normalization_1/FusedBatchNormV3/variance/Fused_Add_" out_port_id="2" id="407"/>
+	</map>
+	<map>
+		<framework name="class_net/class-predict/separable_conv2d/ReadVariableOp" out_port_id="0"/>
+		<IR name="6187761880_const" out_port_id="0" id="1136"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_11/conv2d_1/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_11/conv2d_1/Conv2D/Transpose45480_const" out_port_id="0" id="339"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode7/truediv_1" out_port_id="0"/>
+		<IR name="fpn_cells/cell_2/fnode7/mul_1/Fused_Mul_" out_port_id="2" id="1072"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode3/AddN_1" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode3/AddN_1/sum_1" out_port_id="2" id="554"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode6/truediv_1" out_port_id="0"/>
+		<IR name="fpn_cells/cell_1/fnode6/mul_1/Fused_Mul_" out_port_id="2" id="772"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode3/resample_1_7_8/resize/ResizeNearestNeighbor" out_port_id="0"/>
+		<IR name="fpn_cells/cell_2/fnode3/resample_1_7_8/resize/ResizeNearestNeighbor" out_port_id="4" id="885"/>
+	</map>
+	<map>
+		<framework name="Reshape" out_port_id="0"/>
+		<IR name="Reshape" out_port_id="2" id="1145"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode1/resample_1_5_6/resize/size" out_port_id="0"/>
+		<IR name="fpn_cells/cell_2/fnode1/resample_1_5_6/resize/ResizeNearestNeighbor/Cast_163334_const" out_port_id="0" id="824"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode5/op_after_combine10/conv/separable_conv2d/depthwise" out_port_id="0"/>
+		<IR name="fpn_cells/cell_2/fnode5/op_after_combine10/conv/separable_conv2d/depthwise" out_port_id="2" id="985"/>
+	</map>
+	<map>
+		<framework name="class_net/class-0_1/separable_conv2d/depthwise" out_port_id="0"/>
+		<IR name="class_net/class-0_1/separable_conv2d/depthwise" out_port_id="2" id="1147"/>
+	</map>
+	<map>
+		<framework name="box_net/box-0_3/separable_conv2d/ReadVariableOp" out_port_id="0"/>
+		<IR name="6192561928_const" out_port_id="0" id="1037"/>
+	</map>
+	<map>
+		<framework name="class_net/class-2_2/separable_conv2d/ReadVariableOp_1" out_port_id="0"/>
+		<IR name="class_net/class-2_2/separable_conv2d/Transpose45888_const" out_port_id="0" id="1193"/>
+	</map>
+	<map>
+		<framework name="box_net/IdentityN_13" out_port_id="0"/>
+		<IR name="box_net/mul_13" out_port_id="1" id="1094"/>
+	</map>
+	<map>
+		<framework name="box_net/mul_13" out_port_id="0"/>
+		<IR name="box_net/mul_13" out_port_id="1" id="1094"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode0/resample_1_4_5/resize/ResizeNearestNeighbor" out_port_id="0"/>
+		<IR name="fpn_cells/cell_1/fnode0/resample_1_4_5/resize/ResizeNearestNeighbor" out_port_id="4" id="648"/>
+	</map>
+	<map>
+		<framework name="box_net/box-1-bn-5/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="box_net/box-1_2/BiasAdd/Add/Fused_Add_" out_port_id="2" id="1002"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode3/resample_1_7_8/resize/ResizeNearestNeighbor" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode3/resample_1_7_8/resize/ResizeNearestNeighbor" out_port_id="4" id="551"/>
+	</map>
+	<map>
+		<framework name="class_net/class-1_3/separable_conv2d/ReadVariableOp" out_port_id="0"/>
+		<IR name="6208962092_const" out_port_id="0" id="1215"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode1/op_after_combine6/conv/separable_conv2d/ReadVariableOp" out_port_id="0"/>
+		<IR name="6210962112_const" out_port_id="0" id="842"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_1/se/conv2d_1/Conv2D" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_1/se/conv2d_1/Conv2D" out_port_id="2" id="50"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode1/op_after_combine6/conv/separable_conv2d/ReadVariableOp" out_port_id="0"/>
+		<IR name="6200562008_const" out_port_id="0" id="508"/>
+	</map>
+	<map>
+		<framework name="class_net/class-2_4/separable_conv2d/ReadVariableOp" out_port_id="0"/>
+		<IR name="6189361896_const" out_port_id="0" id="1253"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_1/conv2d/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_1/conv2d/Conv2D/Transpose45198_const" out_port_id="0" id="32"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_6/se/conv2d/Conv2D" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_6/se/conv2d/Conv2D" out_port_id="2" id="186"/>
+	</map>
+	<map>
+		<framework name="class_net/class-predict_2/separable_conv2d" out_port_id="0"/>
+		<IR name="class_net/class-predict_2/separable_conv2d" out_port_id="2" id="1201"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_6/se/conv2d_1/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_6/se/conv2d_1/Conv2D/Transpose45346_const" out_port_id="0" id="190"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_7/tpu_batch_normalization/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_7/tpu_batch_normalization/FusedBatchNormV3/variance/Fused_Add_" out_port_id="2" id="204"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode1/op_after_combine6/conv/separable_conv2d/depthwise" out_port_id="0"/>
+		<IR name="fpn_cells/cell_2/fnode1/op_after_combine6/conv/separable_conv2d/depthwise" out_port_id="2" id="843"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode1/truediv" out_port_id="0"/>
+		<IR name="fpn_cells/cell_1/fnode1/mul/Fused_Mul_" out_port_id="2" id="603"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_14/se/Sigmoid_1" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_14/se/Sigmoid_1" out_port_id="1" id="420"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_2/se/conv2d/BiasAdd/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_2/se/conv2d/BiasAdd/ReadVariableOp/EltwiseUnsqueeze36558_const" out_port_id="0" id="73"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode2/AddN_1" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode2/AddN_1/sum_1" out_port_id="2" id="530"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode0/AddN_1" out_port_id="0"/>
+		<IR name="fpn_cells/cell_2/fnode0/AddN_1/sum_1" out_port_id="2" id="816"/>
+	</map>
+	<map>
+		<framework name="box_net/box-predict/separable_conv2d/ReadVariableOp" out_port_id="0"/>
+		<IR name="6196161964_const" out_port_id="0" id="917"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_14/se/conv2d/BiasAdd/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_14/se/conv2d/BiasAdd/ReadVariableOp/EltwiseUnsqueeze36586_const" out_port_id="0" id="413"/>
+	</map>
+	<map>
+		<framework name="box_net/box-0_1/separable_conv2d/depthwise" out_port_id="0"/>
+		<IR name="box_net/box-0_1/separable_conv2d/depthwise" out_port_id="2" id="944"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_5/se/mul_1" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_5/se/mul_1" out_port_id="2" id="168"/>
+	</map>
+	<map>
+		<framework name="class_net/IdentityN_12" out_port_id="0"/>
+		<IR name="class_net/mul_12" out_port_id="1" id="1245"/>
+	</map>
+	<map>
+		<framework name="class_net/mul_12" out_port_id="0"/>
+		<IR name="class_net/mul_12" out_port_id="1" id="1245"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode2/resample_1_6_7/resize/ResizeNearestNeighbor" out_port_id="0"/>
+		<IR name="fpn_cells/cell_2/fnode2/resample_1_6_7/resize/ResizeNearestNeighbor" out_port_id="4" id="861"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_12/se/conv2d/BiasAdd/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_12/se/conv2d/BiasAdd/ReadVariableOp/EltwiseUnsqueeze36506_const" out_port_id="0" id="357"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode6/op_after_combine11/conv/separable_conv2d/depthwise" out_port_id="0"/>
+		<IR name="fpn_cells/cell_2/fnode6/op_after_combine11/conv/separable_conv2d/depthwise" out_port_id="2" id="1032"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode6/op_after_combine11/conv/separable_conv2d/ReadVariableOp" out_port_id="0"/>
+		<IR name="6187361876_const" out_port_id="0" id="614"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode5/truediv_1" out_port_id="0"/>
+		<IR name="fpn_cells/cell_1/fnode5/mul_1/Fused_Mul_" out_port_id="2" id="754"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode4/truediv_2" out_port_id="0"/>
+		<IR name="fpn_cells/cell_1/fnode4/mul_2/Fused_Mul_" out_port_id="2" id="740"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode0/op_after_combine5/conv/separable_conv2d/ReadVariableOp_1" out_port_id="0"/>
+		<IR name="fpn_cells/cell_1/fnode0/op_after_combine5/conv/separable_conv2d/Transpose45680_const" out_port_id="0" id="655"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode3/resample_1_7_8/resize/ResizeNearestNeighbor" out_port_id="0"/>
+		<IR name="fpn_cells/cell_1/fnode3/resample_1_7_8/resize/ResizeNearestNeighbor" out_port_id="4" id="720"/>
+	</map>
+	<map>
+		<framework name="box_net/box-1/separable_conv2d/ReadVariableOp" out_port_id="0"/>
+		<IR name="6211362116_const" out_port_id="0" id="903"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode7/op_after_combine12/bn/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="fpn_cells/cell_1/fnode7/op_after_combine12/conv/BiasAdd/Add/Fused_Add_" out_port_id="2" id="799"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_11/se/Mean" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_11/se/Mean" out_port_id="2" id="327"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode2/AddN_1" out_port_id="0"/>
+		<IR name="fpn_cells/cell_2/fnode2/AddN_1/sum_1" out_port_id="2" id="864"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_6/se/conv2d_1/BiasAdd/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_6/se/conv2d_1/BiasAdd/ReadVariableOp/EltwiseUnsqueeze36502_const" out_port_id="0" id="192"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode4/op_after_combine9/conv/separable_conv2d/ReadVariableOp_1" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode4/op_after_combine9/conv/separable_conv2d/Transpose45644_const" out_port_id="0" id="578"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_8/se/Mean" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_8/se/Mean" out_port_id="2" id="240"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode5/op_after_combine10/conv/separable_conv2d/depthwise" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode5/op_after_combine10/conv/separable_conv2d/depthwise" out_port_id="2" id="597"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_8/se/conv2d/BiasAdd" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_8/se/conv2d/BiasAdd/Add" out_port_id="2" id="244"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_6/se/IdentityN" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_6/se/mul" out_port_id="1" id="189"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_6/se/mul" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_6/se/mul" out_port_id="1" id="189"/>
+	</map>
+	<map>
+		<framework name="Reshape_9/shape" out_port_id="0"/>
+		<IR name="Reshape_9/Cast_163460_const" out_port_id="0" id="1110"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode5/truediv" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode5/resample_0_2_10/conv2d/BiasAdd/Add/Fused_Add_" out_port_id="2" id="587"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_5/se/conv2d/BiasAdd/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_5/se/conv2d/BiasAdd/ReadVariableOp/EltwiseUnsqueeze36590_const" out_port_id="0" id="160"/>
+	</map>
+	<map>
+		<framework name="box_net/box-predict_1/separable_conv2d/ReadVariableOp" out_port_id="0"/>
+		<IR name="6212162124_const" out_port_id="0" id="964"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_11/se/conv2d/BiasAdd" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_11/se/conv2d/BiasAdd/Add" out_port_id="2" id="331"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode1/op_after_combine6/conv/separable_conv2d/depthwise" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode1/op_after_combine6/conv/separable_conv2d/depthwise" out_port_id="2" id="509"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode7/op_after_combine12/conv/separable_conv2d/ReadVariableOp" out_port_id="0"/>
+		<IR name="6186961872_const" out_port_id="0" id="629"/>
+	</map>
+	<map>
+		<framework name="class_net/IdentityN_4" out_port_id="0"/>
+		<IR name="class_net/mul_4" out_port_id="1" id="1159"/>
+	</map>
+	<map>
+		<framework name="class_net/mul_4" out_port_id="0"/>
+		<IR name="class_net/mul_4" out_port_id="1" id="1159"/>
+	</map>
+	<map>
+		<framework name="class_net/class-0_3/separable_conv2d/ReadVariableOp" out_port_id="0"/>
+		<IR name="6192961932_const" out_port_id="0" id="1208"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_12/se/Sigmoid_1" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_12/se/Sigmoid_1" out_port_id="1" id="364"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode6/op_after_combine11/conv/separable_conv2d/ReadVariableOp_1" out_port_id="0"/>
+		<IR name="fpn_cells/cell_2/fnode6/op_after_combine11/conv/separable_conv2d/Transpose45792_const" out_port_id="0" id="1033"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode1/truediv" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode1/resample_0_2_6/conv2d/BiasAdd/Add/Fused_Add_" out_port_id="2" id="457"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_10/se/conv2d/BiasAdd" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_10/se/conv2d/BiasAdd/Add" out_port_id="2" id="299"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_13/se/conv2d/Conv2D" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_13/se/conv2d/Conv2D" out_port_id="2" id="384"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_2/se/Mean" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_2/se/Mean" out_port_id="2" id="70"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_4/tpu_batch_normalization/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_4/tpu_batch_normalization/FusedBatchNormV3/variance/Fused_Add_" out_port_id="2" id="117"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_0/conv2d/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_0/conv2d/Conv2D/Transpose45194_const" out_port_id="0" id="28"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode4/truediv_1" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode4/mul_1/Fused_Mul_" out_port_id="2" id="569"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode1/op_after_combine6/conv/separable_conv2d/ReadVariableOp_1" out_port_id="0"/>
+		<IR name="fpn_cells/cell_1/fnode1/op_after_combine6/conv/separable_conv2d/Transpose45688_const" out_port_id="0" id="679"/>
+	</map>
+	<map>
+		<framework name="class_net/class-2_1/separable_conv2d/ReadVariableOp" out_port_id="0"/>
+		<IR name="6213362136_const" out_port_id="0" id="1160"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode3/resample_0_0_8/conv2d/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode3/resample_0_0_8/conv2d/Conv2D/Transpose45624_const" out_port_id="0" id="142"/>
+	</map>
+	<map>
+		<framework name="class_net/class-1-bn-6/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="class_net/class-1_3/BiasAdd/Add/Fused_Add_" out_port_id="2" id="1220"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_15/conv2d_1/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_15/conv2d_1/Conv2D/Transpose45584_const" out_port_id="0" id="450"/>
+	</map>
+	<map>
+		<framework name="resample_p6/conv2d/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR name="resample_p6/conv2d/Conv2D/Transpose45588_const" out_port_id="0" id="458"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_10/tpu_batch_normalization_1/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_10/tpu_batch_normalization_1/FusedBatchNormV3/variance/Fused_Add_" out_port_id="2" id="292"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode0/truediv" out_port_id="0"/>
+		<IR name="fpn_cells/cell_1/fnode0/mul/Fused_Mul_" out_port_id="2" id="621"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_15/se/mul_1" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_15/se/mul_1" out_port_id="2" id="449"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode4/AddN_1" out_port_id="0"/>
+		<IR name="fpn_cells/cell_2/fnode4/AddN_1/sum_2" out_port_id="2" id="935"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_8/se/conv2d_1/BiasAdd/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_8/se/conv2d_1/BiasAdd/ReadVariableOp/EltwiseUnsqueeze36530_const" out_port_id="0" id="248"/>
+	</map>
+	<map>
+		<framework name="class_net/class-2_2/separable_conv2d/depthwise" out_port_id="0"/>
+		<IR name="class_net/class-2_2/separable_conv2d/depthwise" out_port_id="2" id="1192"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode2/op_after_combine7/conv/separable_conv2d/ReadVariableOp" out_port_id="0"/>
+		<IR name="6209362096_const" out_port_id="0" id="866"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode2/op_after_combine7/conv/separable_conv2d/depthwise" out_port_id="0"/>
+		<IR name="fpn_cells/cell_1/fnode2/op_after_combine7/conv/separable_conv2d/depthwise" out_port_id="2" id="702"/>
+	</map>
+	<map>
+		<framework name="box_net/box-predict_2/separable_conv2d" out_port_id="0"/>
+		<IR name="box_net/box-predict_2/separable_conv2d" out_port_id="2" id="1014"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_3/se/conv2d_1/Conv2D" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_3/se/conv2d_1/Conv2D" out_port_id="2" id="105"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode1/resample_1_5_6/resize/size" out_port_id="0"/>
+		<IR name="fpn_cells/cell_1/fnode1/resample_1_5_6/resize/ResizeNearestNeighbor/Cast_163500_const" out_port_id="0" id="659"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode2/op_after_combine7/IdentityN" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode2/op_after_combine7/mul" out_port_id="1" id="531"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode2/op_after_combine7/mul" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode2/op_after_combine7/mul" out_port_id="1" id="531"/>
+	</map>
+	<map>
+		<framework name="box_net/box-predict_3/BiasAdd" out_port_id="0"/>
+		<IR name="box_net/box-predict_3/BiasAdd/Add/Transpose" out_port_id="2" id="1065"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_4/se/conv2d/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_4/se/conv2d/Conv2D/Transpose45290_const" out_port_id="0" id="126"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_14/Add" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_14/Add" out_port_id="2" id="426"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode6/truediv" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode6/mul/Fused_Mul_" out_port_id="2" id="605"/>
+	</map>
+	<map>
+		<framework name="box_net/box-predict_2/BiasAdd" out_port_id="0"/>
+		<IR name="box_net/box-predict_2/BiasAdd/Add/Transpose" out_port_id="2" id="1018"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_9/se/IdentityN" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_9/se/mul" out_port_id="1" id="272"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_9/se/mul" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_9/se/mul" out_port_id="1" id="272"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_5/tpu_batch_normalization/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_5/tpu_batch_normalization/FusedBatchNormV3/variance/Fused_Add_" out_port_id="2" id="149"/>
+	</map>
+	<map>
+		<framework name="box_net/IdentityN_3" out_port_id="0"/>
+		<IR name="box_net/mul_3" out_port_id="1" id="949"/>
+	</map>
+	<map>
+		<framework name="box_net/mul_3" out_port_id="0"/>
+		<IR name="box_net/mul_3" out_port_id="1" id="949"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_10/se/conv2d/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_10/se/conv2d/Conv2D/Transpose45446_const" out_port_id="0" id="296"/>
+	</map>
+	<map>
+		<framework name="class_net/class-predict_2/separable_conv2d/ReadVariableOp_1" out_port_id="0"/>
+		<IR name="class_net/class-predict_2/separable_conv2d/Transpose45896_const" out_port_id="0" id="1200"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode6/op_after_combine11/bn/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="fpn_cells/cell_2/fnode6/op_after_combine11/conv/BiasAdd/Add/Fused_Add_" out_port_id="2" id="1036"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode0/resample_1_4_5/resize/size" out_port_id="0"/>
+		<IR name="fpn_cells/cell_1/fnode0/resample_1_4_5/resize/ResizeNearestNeighbor/Cast_163596_const" out_port_id="0" id="635"/>
+	</map>
+	<map>
+		<framework name="box_net/box-2_3/separable_conv2d/ReadVariableOp" out_port_id="0"/>
+		<IR name="6199762000_const" out_port_id="0" id="1051"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_15/se/conv2d/BiasAdd" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_15/se/conv2d/BiasAdd/Add" out_port_id="2" id="442"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode7/truediv_1" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode7/mul_1/Fused_Mul_" out_port_id="2" id="626"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_2/IdentityN" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_2/mul" out_port_id="1" id="63"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_2/mul" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_2/mul" out_port_id="1" id="63"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_4/conv2d/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_4/conv2d/Conv2D/Transpose45276_const" out_port_id="0" id="114"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_8/se/mul_1" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_8/se/mul_1" out_port_id="2" id="251"/>
+	</map>
+	<map>
+		<framework name="box_net/box-predict_3/separable_conv2d/ReadVariableOp" out_port_id="0"/>
+		<IR name="6204162044_const" out_port_id="0" id="1058"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode3/truediv" out_port_id="0"/>
+		<IR name="fpn_cells/cell_2/fnode3/mul/Fused_Mul_" out_port_id="2" id="732"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode2/op_after_combine7/conv/separable_conv2d/ReadVariableOp_1" out_port_id="0"/>
+		<IR name="fpn_cells/cell_2/fnode2/op_after_combine7/conv/separable_conv2d/Transpose45760_const" out_port_id="0" id="868"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_1/tpu_batch_normalization/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_1/tpu_batch_normalization/FusedBatchNormV3/variance/Fused_Add_" out_port_id="2" id="35"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_2/conv2d_1/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_2/conv2d_1/Conv2D/Transpose45246_const" out_port_id="0" id="82"/>
+	</map>
+	<map>
+		<framework name="box_net/box-1/separable_conv2d/ReadVariableOp_1" out_port_id="0"/>
+		<IR name="box_net/box-1/separable_conv2d/Transpose45976_const" out_port_id="0" id="905"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_10/depthwise_conv2d/depthwise/ReadVariableOp" out_port_id="0"/>
+		<IR name="6211762120_const" out_port_id="0" id="289"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode6/truediv" out_port_id="0"/>
+		<IR name="fpn_cells/cell_1/fnode6/mul/Fused_Mul_" out_port_id="2" id="770"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_10/se/conv2d_1/BiasAdd" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_10/se/conv2d_1/BiasAdd/Add" out_port_id="2" id="304"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode6/truediv_1" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode6/mul_1/Fused_Mul_" out_port_id="2" id="607"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_12/conv2d_1/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_12/conv2d_1/Conv2D/Transpose45506_const" out_port_id="0" id="366"/>
+	</map>
+	<map>
+		<framework name="box_net/box-predict_1/separable_conv2d/depthwise" out_port_id="0"/>
+		<IR name="box_net/box-predict_1/separable_conv2d/depthwise" out_port_id="2" id="965"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_15/se/conv2d_1/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_15/se/conv2d_1/Conv2D/Transpose45580_const" out_port_id="0" id="444"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode0/op_after_combine5/conv/separable_conv2d/depthwise" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode0/op_after_combine5/conv/separable_conv2d/depthwise" out_port_id="2" id="485"/>
+	</map>
+	<map>
+		<framework name="box_net/box-predict_3/BiasAdd/ReadVariableOp" out_port_id="0"/>
+		<IR name="box_net/box-predict_3/BiasAdd/ReadVariableOp/EltwiseUnsqueeze36598_const" out_port_id="0" id="1062"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode0/op_after_combine5/bn/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="fpn_cells/cell_1/fnode0/op_after_combine5/conv/BiasAdd/Add/Fused_Add_" out_port_id="2" id="658"/>
+	</map>
+	<map>
+		<framework name="class_net/class-predict/BiasAdd" out_port_id="0"/>
+		<IR name="class_net/class-predict/BiasAdd/Add/Transpose" out_port_id="2" id="1143"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode1/truediv_1" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode1/mul_1/Fused_Mul_" out_port_id="2" id="505"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode3/AddN_1" out_port_id="0"/>
+		<IR name="fpn_cells/cell_2/fnode3/AddN_1/sum_1" out_port_id="2" id="888"/>
+	</map>
+	<map>
+		<framework name="class_net/class-1/separable_conv2d/depthwise" out_port_id="0"/>
+		<IR name="class_net/class-1/separable_conv2d/depthwise" out_port_id="2" id="1123"/>
+	</map>
+	<map>
+		<framework name="Reshape_6/shape" out_port_id="0"/>
+		<IR name="Reshape_6/Cast_163424_const" out_port_id="0" id="1237"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_2/se/Sigmoid_1" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_2/se/Sigmoid_1" out_port_id="1" id="80"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode2/resample_1_6_7/resize/size" out_port_id="0"/>
+		<IR name="fpn_cells/cell_2/fnode2/resample_1_6_7/resize/ResizeNearestNeighbor/Cast_163426_const" out_port_id="0" id="848"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode3/resample_1_7_8/resize/size" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode3/resample_1_7_8/resize/ResizeNearestNeighbor/Cast_163412_const" out_port_id="0" id="538"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_12/se/IdentityN" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_12/se/mul" out_port_id="1" id="359"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_12/se/mul" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_12/se/mul" out_port_id="1" id="359"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_3/Identity_2" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_3/tpu_batch_normalization_2/FusedBatchNormV3/variance/Fused_Add_" out_port_id="2" id="113"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_3/tpu_batch_normalization_2/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_3/tpu_batch_normalization_2/FusedBatchNormV3/variance/Fused_Add_" out_port_id="2" id="113"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode3/op_after_combine8/conv/separable_conv2d/ReadVariableOp_1" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode3/op_after_combine8/conv/separable_conv2d/Transpose45632_const" out_port_id="0" id="558"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode0/resample_1_4_5/resize/ResizeNearestNeighbor" out_port_id="0"/>
+		<IR name="fpn_cells/cell_2/fnode0/resample_1_4_5/resize/ResizeNearestNeighbor" out_port_id="4" id="813"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_15/se/conv2d/BiasAdd/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_15/se/conv2d/BiasAdd/ReadVariableOp/EltwiseUnsqueeze36614_const" out_port_id="0" id="441"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_15/se/conv2d_1/BiasAdd" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_15/se/conv2d_1/BiasAdd/Add" out_port_id="2" id="447"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_8/tpu_batch_normalization/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_8/tpu_batch_normalization/FusedBatchNormV3/variance/Fused_Add_" out_port_id="2" id="232"/>
+	</map>
+	<map>
+		<framework name="class_net/class-predict/separable_conv2d/depthwise" out_port_id="0"/>
+		<IR name="class_net/class-predict/separable_conv2d/depthwise" out_port_id="2" id="1137"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_5/IdentityN_1" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_5/mul_1" out_port_id="1" id="155"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_5/mul_1" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_5/mul_1" out_port_id="1" id="155"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_4/Add" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_4/Add" out_port_id="2" id="141"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode3/truediv_1" out_port_id="0"/>
+		<IR name="fpn_cells/cell_1/fnode3/mul_1/Fused_Mul_" out_port_id="2" id="722"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_0/se/conv2d_1/Conv2D" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_0/se/conv2d_1/Conv2D" out_port_id="2" id="23"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode4/resample_2_8_9/max_pooling2d_2/MaxPool" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode4/resample_2_8_9/max_pooling2d_2/MaxPool" out_port_id="1" id="571"/>
+	</map>
+	<map>
+		<framework name="class_net/class-predict_3/separable_conv2d/ReadVariableOp" out_port_id="0"/>
+		<IR name="6185761860_const" out_port_id="0" id="1229"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode4/AddN_1" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode4/AddN_1/sum_2" out_port_id="2" id="574"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_1/se/conv2d/Conv2D" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_1/se/conv2d/Conv2D" out_port_id="2" id="45"/>
+	</map>
+	<map>
+		<framework name="box_net/box-2_3/separable_conv2d/ReadVariableOp_1" out_port_id="0"/>
+		<IR name="box_net/box-2_3/separable_conv2d/Transpose46080_const" out_port_id="0" id="1053"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_3/depthwise_conv2d/depthwise/ReadVariableOp" out_port_id="0"/>
+		<IR name="6206162064_const" out_port_id="0" id="92"/>
+	</map>
+	<map>
+		<framework name="Reshape_3" out_port_id="0"/>
+		<IR name="Reshape_3" out_port_id="2" id="973"/>
+	</map>
+	<map>
+		<framework name="class_net/class-predict_3/BiasAdd/ReadVariableOp" out_port_id="0"/>
+		<IR name="class_net/class-predict_3/BiasAdd/ReadVariableOp/EltwiseUnsqueeze36606_const" out_port_id="0" id="1233"/>
+	</map>
+	<map>
+		<framework name="box_net/IdentityN_4" out_port_id="0"/>
+		<IR name="box_net/mul_4" out_port_id="1" id="956"/>
+	</map>
+	<map>
+		<framework name="box_net/mul_4" out_port_id="0"/>
+		<IR name="box_net/mul_4" out_port_id="1" id="956"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode3/op_after_combine8/bn/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode3/op_after_combine8/conv/BiasAdd/Add/Fused_Add_" out_port_id="2" id="561"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_9/se/Sigmoid_1" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_9/se/Sigmoid_1" out_port_id="1" id="277"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_4/se/conv2d/BiasAdd/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_4/se/conv2d/BiasAdd/ReadVariableOp/EltwiseUnsqueeze36546_const" out_port_id="0" id="128"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode3/op_after_combine8/conv/separable_conv2d/ReadVariableOp_1" out_port_id="0"/>
+		<IR name="fpn_cells/cell_1/fnode3/op_after_combine8/conv/separable_conv2d/Transpose45704_const" out_port_id="0" id="727"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_12/tpu_batch_normalization/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_12/tpu_batch_normalization/FusedBatchNormV3/variance/Fused_Add_" out_port_id="2" id="346"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_11/se/conv2d_1/BiasAdd/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_11/se/conv2d_1/BiasAdd/ReadVariableOp/EltwiseUnsqueeze36526_const" out_port_id="0" id="335"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode3/op_after_combine8/bn/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="fpn_cells/cell_2/fnode3/op_after_combine8/conv/BiasAdd/Add/Fused_Add_" out_port_id="2" id="895"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_7/se/conv2d/BiasAdd/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_7/se/conv2d/BiasAdd/ReadVariableOp/EltwiseUnsqueeze36562_const" out_port_id="0" id="215"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode0/op_after_combine5/IdentityN" out_port_id="0"/>
+		<IR name="fpn_cells/cell_1/fnode0/op_after_combine5/mul" out_port_id="1" id="652"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode0/op_after_combine5/mul" out_port_id="0"/>
+		<IR name="fpn_cells/cell_1/fnode0/op_after_combine5/mul" out_port_id="1" id="652"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_2/se/conv2d/BiasAdd" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_2/se/conv2d/BiasAdd/Add" out_port_id="2" id="74"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode2/resample_1_6_7/resize/size" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode2/resample_1_6_7/resize/ResizeNearestNeighbor/Cast_163556_const" out_port_id="0" id="514"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_1/tpu_batch_normalization_1/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_1/tpu_batch_normalization_1/FusedBatchNormV3/variance/Fused_Add_" out_port_id="2" id="40"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_13/se/conv2d_1/Conv2D" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_13/se/conv2d_1/Conv2D" out_port_id="2" id="389"/>
+	</map>
+	<map>
+		<framework name="class_net/IdentityN_9" out_port_id="0"/>
+		<IR name="class_net/mul_9" out_port_id="1" id="1214"/>
+	</map>
+	<map>
+		<framework name="class_net/mul_9" out_port_id="0"/>
+		<IR name="class_net/mul_9" out_port_id="1" id="1214"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode0/op_after_combine5/conv/separable_conv2d/ReadVariableOp" out_port_id="0"/>
+		<IR name="6214962152_const" out_port_id="0" id="818"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode4/op_after_combine9/IdentityN" out_port_id="0"/>
+		<IR name="fpn_cells/cell_1/fnode4/op_after_combine9/mul" out_port_id="1" id="742"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode4/op_after_combine9/mul" out_port_id="0"/>
+		<IR name="fpn_cells/cell_1/fnode4/op_after_combine9/mul" out_port_id="1" id="742"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_9/tpu_batch_normalization/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_9/tpu_batch_normalization/FusedBatchNormV3/variance/Fused_Add_" out_port_id="2" id="259"/>
+	</map>
+	<map>
+		<framework name="Reshape_2/shape" out_port_id="0"/>
+		<IR name="Reshape_2/Cast_163446_const" out_port_id="0" id="1175"/>
+	</map>
+	<map>
+		<framework name="box_net/IdentityN_8" out_port_id="0"/>
+		<IR name="box_net/mul_8" out_port_id="1" id="1010"/>
+	</map>
+	<map>
+		<framework name="box_net/mul_8" out_port_id="0"/>
+		<IR name="box_net/mul_8" out_port_id="1" id="1010"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode7/op_after_combine12/IdentityN" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode7/op_after_combine12/mul" out_port_id="1" id="628"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode7/op_after_combine12/mul" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode7/op_after_combine12/mul" out_port_id="1" id="628"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_11/IdentityN_1" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_11/mul_1" out_port_id="1" id="325"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_11/mul_1" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_11/mul_1" out_port_id="1" id="325"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode5/op_after_combine10/conv/separable_conv2d/ReadVariableOp" out_port_id="0"/>
+		<IR name="6216562168_const" out_port_id="0" id="596"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode7/AddN_1" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode7/AddN_1/sum_1" out_port_id="2" id="627"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode5/op_after_combine10/bn/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode5/op_after_combine10/conv/BiasAdd/Add/Fused_Add_" out_port_id="2" id="601"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode6/op_after_combine11/conv/separable_conv2d/depthwise" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode6/op_after_combine11/conv/separable_conv2d/depthwise" out_port_id="2" id="615"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_14/se/conv2d/BiasAdd" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_14/se/conv2d/BiasAdd/Add" out_port_id="2" id="414"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_14/IdentityN" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_14/mul" out_port_id="1" id="403"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_14/mul" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_14/mul" out_port_id="1" id="403"/>
+	</map>
+	<map>
+		<framework name="class_net/class-2-bn-3/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="class_net/class-2/BiasAdd/Add/Fused_Add_" out_port_id="2" id="1134"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode0/truediv" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode0/mul/Fused_Mul_" out_port_id="2" id="464"/>
+	</map>
+	<map>
+		<framework name="class_net/class-2-bn-6/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="class_net/class-2_3/BiasAdd/Add/Fused_Add_" out_port_id="2" id="1227"/>
+	</map>
+	<map>
+		<framework name="box_net/box-0_4/separable_conv2d/ReadVariableOp" out_port_id="0"/>
+		<IR name="6214162144_const" out_port_id="0" id="1081"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_12/se/conv2d_1/BiasAdd" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_12/se/conv2d_1/BiasAdd/Add" out_port_id="2" id="363"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_7/tpu_batch_normalization_1/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_7/tpu_batch_normalization_1/FusedBatchNormV3/variance/Fused_Add_" out_port_id="2" id="209"/>
+	</map>
+	<map>
+		<framework name="class_net/class-predict_2/separable_conv2d/ReadVariableOp" out_port_id="0"/>
+		<IR name="6217362176_const" out_port_id="0" id="1198"/>
+	</map>
+	<map>
+		<framework name="Reshape_1" out_port_id="0"/>
+		<IR name="Reshape_1" out_port_id="2" id="926"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_10/se/Mean" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_10/se/Mean" out_port_id="2" id="295"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode3/op_after_combine8/conv/separable_conv2d/depthwise" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode3/op_after_combine8/conv/separable_conv2d/depthwise" out_port_id="2" id="557"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode0/op_after_combine5/bn/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="fpn_cells/cell_2/fnode0/op_after_combine5/conv/BiasAdd/Add/Fused_Add_" out_port_id="2" id="823"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode3/truediv_1" out_port_id="0"/>
+		<IR name="fpn_cells/cell_2/fnode3/mul_1/Fused_Mul_" out_port_id="2" id="887"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_9/se/conv2d_1/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_9/se/conv2d_1/Conv2D/Transpose45424_const" out_port_id="0" id="273"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode6/truediv" out_port_id="0"/>
+		<IR name="fpn_cells/cell_2/fnode6/mul/Fused_Mul_" out_port_id="2" id="1022"/>
+	</map>
+	<map>
+		<framework name="class_net/IdentityN_2" out_port_id="0"/>
+		<IR name="class_net/mul_2" out_port_id="1" id="1135"/>
+	</map>
+	<map>
+		<framework name="class_net/mul_2" out_port_id="0"/>
+		<IR name="class_net/mul_2" out_port_id="1" id="1135"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_2/tpu_batch_normalization_1/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_2/tpu_batch_normalization_1/FusedBatchNormV3/variance/Fused_Add_" out_port_id="2" id="67"/>
+	</map>
+	<map>
+		<framework name="class_net/class-predict_4/BiasAdd" out_port_id="0"/>
+		<IR name="class_net/class-predict_4/BiasAdd/Add/Transpose" out_port_id="2" id="1267"/>
+	</map>
+	<map>
+		<framework name="concat" out_port_id="0"/>
+		<IR name="concat" out_port_id="5" id="1270"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_11/conv2d/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_11/conv2d/Conv2D/Transpose45458_const" out_port_id="0" id="316"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_15/se/conv2d_1/Conv2D" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_15/se/conv2d_1/Conv2D" out_port_id="2" id="445"/>
+	</map>
+	<map>
+		<framework name="box_net/box-0_2/separable_conv2d/ReadVariableOp_1" out_port_id="0"/>
+		<IR name="box_net/box-0_2/separable_conv2d/Transpose46032_const" out_port_id="0" id="992"/>
+	</map>
+	<map>
+		<framework name="box_net/box-1_3/separable_conv2d/ReadVariableOp_1" out_port_id="0"/>
+		<IR name="box_net/box-1_3/separable_conv2d/Transpose46072_const" out_port_id="0" id="1046"/>
+	</map>
+	<map>
+		<framework name="box_net/box-predict_3/separable_conv2d/ReadVariableOp_1" out_port_id="0"/>
+		<IR name="box_net/box-predict_3/separable_conv2d/Transpose46088_const" out_port_id="0" id="1060"/>
+	</map>
+	<map>
+		<framework name="box_net/box-predict_4/separable_conv2d/ReadVariableOp_1" out_port_id="0"/>
+		<IR name="box_net/box-predict_4/separable_conv2d/Transpose46120_const" out_port_id="0" id="1104"/>
+	</map>
+	<map>
+		<framework name="class_net/class-predict_3/separable_conv2d/depthwise" out_port_id="0"/>
+		<IR name="class_net/class-predict_3/separable_conv2d/depthwise" out_port_id="2" id="1230"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_9/IdentityN" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_9/mul" out_port_id="1" id="260"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_9/mul" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_9/mul" out_port_id="1" id="260"/>
+	</map>
+	<map>
+		<framework name="box_net/IdentityN_9" out_port_id="0"/>
+		<IR name="box_net/mul_9" out_port_id="1" id="1043"/>
+	</map>
+	<map>
+		<framework name="box_net/mul_9" out_port_id="0"/>
+		<IR name="box_net/mul_9" out_port_id="1" id="1043"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode7/op_after_combine12/conv/separable_conv2d/depthwise" out_port_id="0"/>
+		<IR name="fpn_cells/cell_2/fnode7/op_after_combine12/conv/separable_conv2d/depthwise" out_port_id="2" id="1076"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_11/depthwise_conv2d/depthwise/ReadVariableOp" out_port_id="0"/>
+		<IR name="6198161984_const" out_port_id="0" id="321"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_8/se/conv2d/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_8/se/conv2d/Conv2D/Transpose45394_const" out_port_id="0" id="241"/>
+	</map>
+	<map>
+		<framework name="class_net/IdentityN_8" out_port_id="0"/>
+		<IR name="class_net/mul_8" out_port_id="1" id="1197"/>
+	</map>
+	<map>
+		<framework name="class_net/mul_8" out_port_id="0"/>
+		<IR name="class_net/mul_8" out_port_id="1" id="1197"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode0/op_after_combine5/conv/separable_conv2d/ReadVariableOp_1" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode0/op_after_combine5/conv/separable_conv2d/Transpose45596_const" out_port_id="0" id="486"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_15/IdentityN" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_15/mul" out_port_id="1" id="431"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_15/mul" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_15/mul" out_port_id="1" id="431"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_11/se/conv2d/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_11/se/conv2d/Conv2D/Transpose45472_const" out_port_id="0" id="328"/>
+	</map>
+	<map>
+		<framework name="box_net/box-1_1/separable_conv2d/ReadVariableOp" out_port_id="0"/>
+		<IR name="6210162104_const" out_port_id="0" id="950"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_7/se/conv2d_1/BiasAdd" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_7/se/conv2d_1/BiasAdd/Add" out_port_id="2" id="221"/>
+	</map>
+	<map>
+		<framework name="Reshape_7" out_port_id="0"/>
+		<IR name="Reshape_7" out_port_id="2" id="1067"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_10/conv2d_1/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_10/conv2d_1/Conv2D/Transpose45454_const" out_port_id="0" id="307"/>
+	</map>
+	<map>
+		<framework name="box_net/IdentityN_2" out_port_id="0"/>
+		<IR name="box_net/mul_2" out_port_id="1" id="916"/>
+	</map>
+	<map>
+		<framework name="box_net/mul_2" out_port_id="0"/>
+		<IR name="box_net/mul_2" out_port_id="1" id="916"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_6/IdentityN" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_6/mul" out_port_id="1" id="177"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_6/mul" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_6/mul" out_port_id="1" id="177"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_13/se/Mean" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_13/se/Mean" out_port_id="2" id="382"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_6/se/conv2d/BiasAdd" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_6/se/conv2d/BiasAdd/Add" out_port_id="2" id="188"/>
+	</map>
+	<map>
+		<framework name="class_net/class-2_3/separable_conv2d/ReadVariableOp" out_port_id="0"/>
+		<IR name="6207362076_const" out_port_id="0" id="1222"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/stem/IdentityN" out_port_id="0"/>
+		<IR name="efficientnet-b0/stem/mul" out_port_id="1" id="9"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/stem/mul" out_port_id="0"/>
+		<IR name="efficientnet-b0/stem/mul" out_port_id="1" id="9"/>
+	</map>
+	<map>
+		<framework name="class_net/IdentityN_11" out_port_id="0"/>
+		<IR name="class_net/mul_11" out_port_id="1" id="1228"/>
+	</map>
+	<map>
+		<framework name="class_net/mul_11" out_port_id="0"/>
+		<IR name="class_net/mul_11" out_port_id="1" id="1228"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_15/depthwise_conv2d/depthwise/ReadVariableOp" out_port_id="0"/>
+		<IR name="6202562028_const" out_port_id="0" id="432"/>
+	</map>
+	<map>
+		<framework name="class_net/class-predict_1/separable_conv2d/ReadVariableOp_1" out_port_id="0"/>
+		<IR name="class_net/class-predict_1/separable_conv2d/Transpose45864_const" out_port_id="0" id="1169"/>
+	</map>
+	<map>
+		<framework name="Reshape_8" out_port_id="0"/>
+		<IR name="Reshape_8" out_port_id="2" id="1269"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_4/se/conv2d_1/BiasAdd/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_4/se/conv2d_1/BiasAdd/ReadVariableOp/EltwiseUnsqueeze36602_const" out_port_id="0" id="133"/>
+	</map>
+	<map>
+		<framework name="box_net/box-1_4/separable_conv2d/depthwise" out_port_id="0"/>
+		<IR name="box_net/box-1_4/separable_conv2d/depthwise" out_port_id="2" id="1089"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_6/se/conv2d_1/Conv2D" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_6/se/conv2d_1/Conv2D" out_port_id="2" id="191"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode5/op_after_combine10/conv/separable_conv2d/ReadVariableOp" out_port_id="0"/>
+		<IR name="6206962072_const" out_port_id="0" id="984"/>
+	</map>
+	<map>
+		<framework name="class_net/class-1_2/separable_conv2d/ReadVariableOp" out_port_id="0"/>
+		<IR name="6188961892_const" out_port_id="0" id="1184"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode6/truediv_1" out_port_id="0"/>
+		<IR name="fpn_cells/cell_2/fnode6/mul_1/Fused_Mul_" out_port_id="2" id="1024"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_1/se/Mean" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_1/se/Mean" out_port_id="2" id="43"/>
+	</map>
+	<map>
+		<framework name="class_net/class-predict_3/BiasAdd" out_port_id="0"/>
+		<IR name="class_net/class-predict_3/BiasAdd/Add/Transpose" out_port_id="2" id="1236"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_4/se/Sigmoid_1" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_4/se/Sigmoid_1" out_port_id="1" id="135"/>
+	</map>
+	<map>
+		<framework name="class_net/class-1_4/separable_conv2d/depthwise" out_port_id="0"/>
+		<IR name="class_net/class-1_4/separable_conv2d/depthwise" out_port_id="2" id="1247"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_0/se/mul_1" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_0/se/mul_1" out_port_id="2" id="27"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode0/resample_1_4_5/resize/ResizeNearestNeighbor" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode0/resample_1_4_5/resize/ResizeNearestNeighbor" out_port_id="4" id="479"/>
+	</map>
+	<map>
+		<framework name="Reshape_5" out_port_id="0"/>
+		<IR name="Reshape_5" out_port_id="2" id="1020"/>
+	</map>
+	<map>
+		<framework name="box_net/box-0_2/separable_conv2d/depthwise" out_port_id="0"/>
+		<IR name="box_net/box-0_2/separable_conv2d/depthwise" out_port_id="2" id="991"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_0/se/conv2d/BiasAdd/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_0/se/conv2d/BiasAdd/ReadVariableOp/EltwiseUnsqueeze36654_const" out_port_id="0" id="19"/>
+	</map>
+	<map>
+		<framework name="box_net/box-1_2/separable_conv2d/depthwise" out_port_id="0"/>
+		<IR name="box_net/box-1_2/separable_conv2d/depthwise" out_port_id="2" id="998"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_5/conv2d_1/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_5/conv2d_1/Conv2D/Transpose45324_const" out_port_id="0" id="169"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode7/op_after_combine12/IdentityN" out_port_id="0"/>
+		<IR name="fpn_cells/cell_1/fnode7/op_after_combine12/mul" out_port_id="1" id="793"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode7/op_after_combine12/mul" out_port_id="0"/>
+		<IR name="fpn_cells/cell_1/fnode7/op_after_combine12/mul" out_port_id="1" id="793"/>
+	</map>
+	<map>
+		<framework name="class_net/IdentityN_1" out_port_id="0"/>
+		<IR name="class_net/mul_1" out_port_id="1" id="1128"/>
+	</map>
+	<map>
+		<framework name="class_net/mul_1" out_port_id="0"/>
+		<IR name="class_net/mul_1" out_port_id="1" id="1128"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_12/Add" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_12/Add" out_port_id="2" id="370"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_6/conv2d/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_6/conv2d/Conv2D/Transpose45328_const" out_port_id="0" id="173"/>
+	</map>
+	<map>
+		<framework name="class_net/IdentityN_10" out_port_id="0"/>
+		<IR name="class_net/mul_10" out_port_id="1" id="1221"/>
+	</map>
+	<map>
+		<framework name="class_net/mul_10" out_port_id="0"/>
+		<IR name="class_net/mul_10" out_port_id="1" id="1221"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_8/se/conv2d/Conv2D" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_8/se/conv2d/Conv2D" out_port_id="2" id="242"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_15/se/conv2d/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_15/se/conv2d/Conv2D/Transpose45576_const" out_port_id="0" id="439"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_0/tpu_batch_normalization/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_0/tpu_batch_normalization/FusedBatchNormV3/variance/Fused_Add_" out_port_id="2" id="13"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode2/op_after_combine7/conv/separable_conv2d/ReadVariableOp" out_port_id="0"/>
+		<IR name="6201762020_const" out_port_id="0" id="701"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode4/op_after_combine9/conv/separable_conv2d/ReadVariableOp_1" out_port_id="0"/>
+		<IR name="fpn_cells/cell_1/fnode4/op_after_combine9/conv/separable_conv2d/Transpose45712_const" out_port_id="0" id="745"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode1/truediv" out_port_id="0"/>
+		<IR name="fpn_cells/cell_2/fnode1/mul/Fused_Mul_" out_port_id="2" id="768"/>
+	</map>
+	<map>
+		<framework name="Reshape/shape" out_port_id="0"/>
+		<IR name="Reshape/Cast_163352_const" out_port_id="0" id="1144"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_9/Add" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_9/Add" out_port_id="2" id="283"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode4/AddN_1" out_port_id="0"/>
+		<IR name="fpn_cells/cell_1/fnode4/AddN_1/sum_2" out_port_id="2" id="741"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode2/truediv_1" out_port_id="0"/>
+		<IR name="fpn_cells/cell_2/fnode2/mul_1/Fused_Mul_" out_port_id="2" id="863"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_10/se/conv2d_1/Conv2D" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_10/se/conv2d_1/Conv2D" out_port_id="2" id="302"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_6/tpu_batch_normalization/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_6/tpu_batch_normalization/FusedBatchNormV3/variance/Fused_Add_" out_port_id="2" id="176"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode1/op_after_combine6/IdentityN" out_port_id="0"/>
+		<IR name="fpn_cells/cell_1/fnode1/op_after_combine6/mul" out_port_id="1" id="676"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode1/op_after_combine6/mul" out_port_id="0"/>
+		<IR name="fpn_cells/cell_1/fnode1/op_after_combine6/mul" out_port_id="1" id="676"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_9/se/conv2d/BiasAdd/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_9/se/conv2d/BiasAdd/ReadVariableOp/EltwiseUnsqueeze36522_const" out_port_id="0" id="270"/>
+	</map>
+	<map>
+		<framework name="class_net/class-predict_1/separable_conv2d" out_port_id="0"/>
+		<IR name="class_net/class-predict_1/separable_conv2d" out_port_id="2" id="1170"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode4/truediv_1" out_port_id="0"/>
+		<IR name="fpn_cells/cell_2/fnode4/mul_1/Fused_Mul_" out_port_id="2" id="930"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_2/tpu_batch_normalization/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_2/tpu_batch_normalization/FusedBatchNormV3/variance/Fused_Add_" out_port_id="2" id="62"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode0/op_after_combine5/conv/separable_conv2d/depthwise" out_port_id="0"/>
+		<IR name="fpn_cells/cell_1/fnode0/op_after_combine5/conv/separable_conv2d/depthwise" out_port_id="2" id="654"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_6/conv2d_1/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_6/conv2d_1/Conv2D/Transpose45350_const" out_port_id="0" id="196"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_14/tpu_batch_normalization/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_14/tpu_batch_normalization/FusedBatchNormV3/variance/Fused_Add_" out_port_id="2" id="402"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode3/AddN_1" out_port_id="0"/>
+		<IR name="fpn_cells/cell_1/fnode3/AddN_1/sum_1" out_port_id="2" id="723"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_3/IdentityN" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_3/mul" out_port_id="1" id="91"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_3/mul" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_3/mul" out_port_id="1" id="91"/>
+	</map>
+	<map>
+		<framework name="box_net/box-1_1/separable_conv2d/depthwise" out_port_id="0"/>
+		<IR name="box_net/box-1_1/separable_conv2d/depthwise" out_port_id="2" id="951"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_12/conv2d/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_12/conv2d/Conv2D/Transpose45484_const" out_port_id="0" id="343"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_0/se/conv2d_1/BiasAdd" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_0/se/conv2d_1/BiasAdd/Add" out_port_id="2" id="25"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_1/IdentityN" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_1/mul" out_port_id="1" id="36"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_1/mul" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_1/mul" out_port_id="1" id="36"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_4/se/mul_1" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_4/se/mul_1" out_port_id="2" id="136"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_13/conv2d_1/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_13/conv2d_1/Conv2D/Transpose45532_const" out_port_id="0" id="394"/>
+	</map>
+	<map>
+		<framework name="box_net/IdentityN_11" out_port_id="0"/>
+		<IR name="box_net/mul_11" out_port_id="1" id="1057"/>
+	</map>
+	<map>
+		<framework name="box_net/mul_11" out_port_id="0"/>
+		<IR name="box_net/mul_11" out_port_id="1" id="1057"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_13/se/conv2d_1/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_13/se/conv2d_1/Conv2D/Transpose45528_const" out_port_id="0" id="388"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_1/se/conv2d/BiasAdd" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_1/se/conv2d/BiasAdd/Add" out_port_id="2" id="47"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode3/op_after_combine8/bn/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="fpn_cells/cell_1/fnode3/op_after_combine8/conv/BiasAdd/Add/Fused_Add_" out_port_id="2" id="730"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode1/op_after_combine6/bn/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="fpn_cells/cell_1/fnode1/op_after_combine6/conv/BiasAdd/Add/Fused_Add_" out_port_id="2" id="682"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode7/op_after_combine12/bn/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode7/op_after_combine12/conv/BiasAdd/Add/Fused_Add_" out_port_id="2" id="634"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode1/op_after_combine6/bn/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="fpn_cells/cell_2/fnode1/op_after_combine6/conv/BiasAdd/Add/Fused_Add_" out_port_id="2" id="847"/>
+	</map>
+	<map>
+		<framework name="box_net/box-1-bn-7/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="box_net/box-1_4/BiasAdd/Add/Fused_Add_" out_port_id="2" id="1093"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode0/AddN_1" out_port_id="0"/>
+		<IR name="fpn_cells/cell_1/fnode0/AddN_1/sum_1" out_port_id="2" id="651"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_0/se/conv2d/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_0/se/conv2d/Conv2D/Transpose45186_const" out_port_id="0" id="17"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_9/conv2d/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_9/conv2d/Conv2D/Transpose45406_const" out_port_id="0" id="256"/>
+	</map>
+	<map>
+		<framework name="box_net/IdentityN_10" out_port_id="0"/>
+		<IR name="box_net/mul_10" out_port_id="1" id="1050"/>
+	</map>
+	<map>
+		<framework name="box_net/mul_10" out_port_id="0"/>
+		<IR name="box_net/mul_10" out_port_id="1" id="1050"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode0/op_after_combine5/conv/separable_conv2d/ReadVariableOp" out_port_id="0"/>
+		<IR name="6199361996_const" out_port_id="0" id="484"/>
+	</map>
+	<map>
+		<framework name="box_net/box-predict_2/separable_conv2d/ReadVariableOp_1" out_port_id="0"/>
+		<IR name="box_net/box-predict_2/separable_conv2d/Transpose46056_const" out_port_id="0" id="1013"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_12/IdentityN" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_12/mul" out_port_id="1" id="347"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_12/mul" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_12/mul" out_port_id="1" id="347"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_8/conv2d_1/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_8/conv2d_1/Conv2D/Transpose45402_const" out_port_id="0" id="252"/>
+	</map>
+	<map>
+		<framework name="class_net/class-2/separable_conv2d/ReadVariableOp" out_port_id="0"/>
+		<IR name="6196561968_const" out_port_id="0" id="1129"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode2/op_after_combine7/conv/separable_conv2d/ReadVariableOp" out_port_id="0"/>
+		<IR name="6190561908_const" out_port_id="0" id="532"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_15/se/Sigmoid_1" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_15/se/Sigmoid_1" out_port_id="1" id="448"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode2/op_after_combine7/IdentityN" out_port_id="0"/>
+		<IR name="fpn_cells/cell_2/fnode2/op_after_combine7/mul" out_port_id="1" id="865"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode2/op_after_combine7/mul" out_port_id="0"/>
+		<IR name="fpn_cells/cell_2/fnode2/op_after_combine7/mul" out_port_id="1" id="865"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_8/se/Sigmoid_1" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_8/se/Sigmoid_1" out_port_id="1" id="250"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_4/IdentityN_1" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_4/mul_1" out_port_id="1" id="123"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_4/mul_1" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_4/mul_1" out_port_id="1" id="123"/>
+	</map>
+	<map>
+		<framework name="class_net/class-2_2/separable_conv2d/ReadVariableOp" out_port_id="0"/>
+		<IR name="6194161944_const" out_port_id="0" id="1191"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_6/se/conv2d/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_6/se/conv2d/Conv2D/Transpose45342_const" out_port_id="0" id="185"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_1/se/conv2d_1/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_1/se/conv2d_1/Conv2D/Transpose45216_const" out_port_id="0" id="49"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/stem/conv2d/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR name="image_arrays/placeholder_port_0/reverse_input_channels/Concat59392_const" out_port_id="0" id="5"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_13/Identity_2" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_13/tpu_batch_normalization_2/FusedBatchNormV3/variance/Fused_Add_" out_port_id="2" id="397"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_13/tpu_batch_normalization_2/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_13/tpu_batch_normalization_2/FusedBatchNormV3/variance/Fused_Add_" out_port_id="2" id="397"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode1/AddN_1" out_port_id="0"/>
+		<IR name="fpn_cells/cell_2/fnode1/AddN_1/sum_1" out_port_id="2" id="840"/>
+	</map>
+	<map>
+		<framework name="box_net/box-2_2/separable_conv2d/depthwise" out_port_id="0"/>
+		<IR name="box_net/box-2_2/separable_conv2d/depthwise" out_port_id="2" id="1005"/>
+	</map>
+	<map>
+		<framework name="class_net/class-0_2/separable_conv2d/ReadVariableOp" out_port_id="0"/>
+		<IR name="6197761980_const" out_port_id="0" id="1177"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode3/truediv" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode3/resample_0_0_8/conv2d/BiasAdd/Add/Fused_Add_" out_port_id="2" id="145"/>
+	</map>
+	<map>
+		<framework name="box_net/box-0_1/separable_conv2d/ReadVariableOp_1" out_port_id="0"/>
+		<IR name="box_net/box-0_1/separable_conv2d/Transpose46000_const" out_port_id="0" id="945"/>
+	</map>
+	<map>
+		<framework name="box_net/box-0_4/separable_conv2d/depthwise" out_port_id="0"/>
+		<IR name="box_net/box-0_4/separable_conv2d/depthwise" out_port_id="2" id="1082"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_11/se/IdentityN" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_11/se/mul" out_port_id="1" id="332"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_11/se/mul" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_11/se/mul" out_port_id="1" id="332"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_6/IdentityN_1" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_6/mul_1" out_port_id="1" id="182"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_6/mul_1" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_6/mul_1" out_port_id="1" id="182"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode5/AddN_1" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode5/AddN_1/sum_2" out_port_id="2" id="594"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode6/op_after_combine11/IdentityN" out_port_id="0"/>
+		<IR name="fpn_cells/cell_1/fnode6/op_after_combine11/mul" out_port_id="1" id="778"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode6/op_after_combine11/mul" out_port_id="0"/>
+		<IR name="fpn_cells/cell_1/fnode6/op_after_combine11/mul" out_port_id="1" id="778"/>
+	</map>
+	<map>
+		<framework name="Reshape_4/shape" out_port_id="0"/>
+		<IR name="Reshape_4/Cast_163330_const" out_port_id="0" id="1206"/>
+	</map>
+	<map>
+		<framework name="box_net/box-1-bn-3/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="box_net/box-1/BiasAdd/Add/Fused_Add_" out_port_id="2" id="908"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_5/se/conv2d_1/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_5/se/conv2d_1/Conv2D/Transpose45320_const" out_port_id="0" id="163"/>
+	</map>
+	<map>
+		<framework name="class_net/class-predict_4/BiasAdd/ReadVariableOp" out_port_id="0"/>
+		<IR name="class_net/class-predict_4/BiasAdd/ReadVariableOp/EltwiseUnsqueeze36498_const" out_port_id="0" id="1264"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_8/depthwise_conv2d/depthwise/ReadVariableOp" out_port_id="0"/>
+		<IR name="6189761900_const" out_port_id="0" id="234"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode7/op_after_combine12/IdentityN" out_port_id="0"/>
+		<IR name="fpn_cells/cell_2/fnode7/op_after_combine12/mul" out_port_id="1" id="1074"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode7/op_after_combine12/mul" out_port_id="0"/>
+		<IR name="fpn_cells/cell_2/fnode7/op_after_combine12/mul" out_port_id="1" id="1074"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_8/conv2d/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_8/conv2d/Conv2D/Transpose45380_const" out_port_id="0" id="229"/>
+	</map>
+	<map>
+		<framework name="Reshape_3/shape" out_port_id="0"/>
+		<IR name="Reshape_3/Cast_163328_const" out_port_id="0" id="972"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode4/op_after_combine9/conv/separable_conv2d/depthwise" out_port_id="0"/>
+		<IR name="fpn_cells/cell_2/fnode4/op_after_combine9/conv/separable_conv2d/depthwise" out_port_id="2" id="938"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode5/truediv" out_port_id="0"/>
+		<IR name="fpn_cells/cell_1/fnode5/mul/Fused_Mul_" out_port_id="2" id="752"/>
+	</map>
+	<map>
+		<framework name="box_net/box-2/separable_conv2d/ReadVariableOp_1" out_port_id="0"/>
+		<IR name="box_net/box-2/separable_conv2d/Transpose45984_const" out_port_id="0" id="912"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_7/Add" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_7/Add" out_port_id="2" id="228"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_15/se/conv2d/Conv2D" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_15/se/conv2d/Conv2D" out_port_id="2" id="440"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode0/truediv_1" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode0/mul_1/Fused_Mul_" out_port_id="2" id="481"/>
+	</map>
+	<map>
+		<framework name="class_net/class-1_3/separable_conv2d/depthwise" out_port_id="0"/>
+		<IR name="class_net/class-1_3/separable_conv2d/depthwise" out_port_id="2" id="1216"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode2/truediv" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode2/resample_0_1_7/conv2d/BiasAdd/Add/Fused_Add_" out_port_id="2" id="315"/>
+	</map>
+	<map>
+		<framework name="class_net/class-predict_2/BiasAdd" out_port_id="0"/>
+		<IR name="class_net/class-predict_2/BiasAdd/Add/Transpose" out_port_id="2" id="1205"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode7/op_after_combine12/conv/separable_conv2d/depthwise" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode7/op_after_combine12/conv/separable_conv2d/depthwise" out_port_id="2" id="630"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_7/se/conv2d/Conv2D" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_7/se/conv2d/Conv2D" out_port_id="2" id="214"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_2/Identity_2" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_2/tpu_batch_normalization_2/FusedBatchNormV3/variance/Fused_Add_" out_port_id="2" id="85"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_2/tpu_batch_normalization_2/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_2/tpu_batch_normalization_2/FusedBatchNormV3/variance/Fused_Add_" out_port_id="2" id="85"/>
+	</map>
+	<map>
+		<framework name="Reshape_8/shape" out_port_id="0"/>
+		<IR name="Reshape_8/Cast_163380_const" out_port_id="0" id="1268"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode4/truediv_2" out_port_id="0"/>
+		<IR name="fpn_cells/cell_2/fnode4/mul_2/Fused_Mul_" out_port_id="2" id="934"/>
+	</map>
+	<map>
+		<framework name="box_net/box-1_3/separable_conv2d/ReadVariableOp" out_port_id="0"/>
+		<IR name="6215762160_const" out_port_id="0" id="1044"/>
+	</map>
+	<map>
+		<framework name="class_net/class-2_3/separable_conv2d/depthwise" out_port_id="0"/>
+		<IR name="class_net/class-2_3/separable_conv2d/depthwise" out_port_id="2" id="1223"/>
+	</map>
+	<map>
+		<framework name="class_net/class-2/separable_conv2d/depthwise" out_port_id="0"/>
+		<IR name="class_net/class-2/separable_conv2d/depthwise" out_port_id="2" id="1130"/>
+	</map>
+	<map>
+		<framework name="class_net/IdentityN_6" out_port_id="0"/>
+		<IR name="class_net/mul_6" out_port_id="1" id="1183"/>
+	</map>
+	<map>
+		<framework name="class_net/mul_6" out_port_id="0"/>
+		<IR name="class_net/mul_6" out_port_id="1" id="1183"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_6/se/mul_1" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_6/se/mul_1" out_port_id="2" id="195"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode7/op_after_combine12/conv/separable_conv2d/ReadVariableOp_1" out_port_id="0"/>
+		<IR name="fpn_cells/cell_2/fnode7/op_after_combine12/conv/separable_conv2d/Transpose45800_const" out_port_id="0" id="1077"/>
+	</map>
+	<map>
+		<framework name="box_net/box-0_4/separable_conv2d/ReadVariableOp_1" out_port_id="0"/>
+		<IR name="box_net/box-0_4/separable_conv2d/Transpose46096_const" out_port_id="0" id="1083"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_14/conv2d_1/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_14/conv2d_1/Conv2D/Transpose45558_const" out_port_id="0" id="422"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode1/op_after_combine6/conv/separable_conv2d/depthwise" out_port_id="0"/>
+		<IR name="fpn_cells/cell_1/fnode1/op_after_combine6/conv/separable_conv2d/depthwise" out_port_id="2" id="678"/>
+	</map>
+	<map>
+		<framework name="class_net/class-0_3/separable_conv2d/ReadVariableOp_1" out_port_id="0"/>
+		<IR name="class_net/class-0_3/separable_conv2d/Transpose45904_const" out_port_id="0" id="1210"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode4/op_after_combine9/conv/separable_conv2d/depthwise" out_port_id="0"/>
+		<IR name="fpn_cells/cell_1/fnode4/op_after_combine9/conv/separable_conv2d/depthwise" out_port_id="2" id="744"/>
+	</map>
+	<map>
+		<framework name="class_net/class-1_2/separable_conv2d/ReadVariableOp_1" out_port_id="0"/>
+		<IR name="class_net/class-1_2/separable_conv2d/Transpose45880_const" out_port_id="0" id="1186"/>
+	</map>
+	<map>
+		<framework name="class_net/class-1_1/separable_conv2d/ReadVariableOp_1" out_port_id="0"/>
+		<IR name="class_net/class-1_1/separable_conv2d/Transpose45848_const" out_port_id="0" id="1155"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_1/depthwise_conv2d/depthwise/ReadVariableOp" out_port_id="0"/>
+		<IR name="6202962032_const" out_port_id="0" id="37"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_9/se/conv2d/Conv2D" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_9/se/conv2d/Conv2D" out_port_id="2" id="269"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode2/AddN_1" out_port_id="0"/>
+		<IR name="fpn_cells/cell_1/fnode2/AddN_1/sum_1" out_port_id="2" id="699"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode5/op_after_combine10/conv/separable_conv2d/ReadVariableOp_1" out_port_id="0"/>
+		<IR name="fpn_cells/cell_1/fnode5/op_after_combine10/conv/separable_conv2d/Transpose45720_const" out_port_id="0" id="763"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_4/tpu_batch_normalization_1/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_4/tpu_batch_normalization_1/FusedBatchNormV3/variance/Fused_Add_" out_port_id="2" id="122"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode0/resample_1_4_5/resize/size" out_port_id="0"/>
+		<IR name="fpn_cells/cell_2/fnode0/resample_1_4_5/resize/ResizeNearestNeighbor/Cast_163410_const" out_port_id="0" id="800"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode6/op_after_combine11/IdentityN" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode6/op_after_combine11/mul" out_port_id="1" id="613"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode6/op_after_combine11/mul" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode6/op_after_combine11/mul" out_port_id="1" id="613"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_0/se/conv2d/Conv2D" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_0/se/conv2d/Conv2D" out_port_id="2" id="18"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode1/AddN_1" out_port_id="0"/>
+		<IR name="fpn_cells/cell_1/fnode1/AddN_1/sum_1" out_port_id="2" id="675"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_10/se/conv2d_1/BiasAdd/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_10/se/conv2d_1/BiasAdd/ReadVariableOp/EltwiseUnsqueeze36646_const" out_port_id="0" id="303"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_14/se/mul_1" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_14/se/mul_1" out_port_id="2" id="421"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode4/op_after_combine9/conv/separable_conv2d/ReadVariableOp_1" out_port_id="0"/>
+		<IR name="fpn_cells/cell_2/fnode4/op_after_combine9/conv/separable_conv2d/Transpose45776_const" out_port_id="0" id="939"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_9/se/conv2d_1/BiasAdd" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_9/se/conv2d_1/BiasAdd/Add" out_port_id="2" id="276"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_10/Add" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_10/Add" out_port_id="2" id="311"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_14/conv2d/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_14/conv2d/Conv2D/Transpose45536_const" out_port_id="0" id="399"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_2/se/mul_1" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_2/se/mul_1" out_port_id="2" id="81"/>
+	</map>
+	<map>
+		<framework name="box_net/IdentityN_1" out_port_id="0"/>
+		<IR name="box_net/mul_1" out_port_id="1" id="909"/>
+	</map>
+	<map>
+		<framework name="box_net/mul_1" out_port_id="0"/>
+		<IR name="box_net/mul_1" out_port_id="1" id="909"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode0/truediv" out_port_id="0"/>
+		<IR name="fpn_cells/cell_2/fnode0/mul/Fused_Mul_" out_port_id="2" id="786"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_9/se/conv2d_1/Conv2D" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_9/se/conv2d_1/Conv2D" out_port_id="2" id="274"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_8/se/conv2d_1/Conv2D" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_8/se/conv2d_1/Conv2D" out_port_id="2" id="247"/>
+	</map>
+	<map>
+		<framework name="class_net/IdentityN_5" out_port_id="0"/>
+		<IR name="class_net/mul_5" out_port_id="1" id="1166"/>
+	</map>
+	<map>
+		<framework name="class_net/mul_5" out_port_id="0"/>
+		<IR name="class_net/mul_5" out_port_id="1" id="1166"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_14/IdentityN_1" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_14/mul_1" out_port_id="1" id="408"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_14/mul_1" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_14/mul_1" out_port_id="1" id="408"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode0/resample_1_4_5/resize/size" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode0/resample_1_4_5/resize/ResizeNearestNeighbor/Cast_163384_const" out_port_id="0" id="466"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode4/op_after_combine9/bn/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="fpn_cells/cell_1/fnode4/op_after_combine9/conv/BiasAdd/Add/Fused_Add_" out_port_id="2" id="748"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_7/se/Mean" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_7/se/Mean" out_port_id="2" id="212"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode3/op_after_combine8/conv/separable_conv2d/depthwise" out_port_id="0"/>
+		<IR name="fpn_cells/cell_2/fnode3/op_after_combine8/conv/separable_conv2d/depthwise" out_port_id="2" id="891"/>
+	</map>
+	<map>
+		<framework name="box_net/box-0-bn-6/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="box_net/box-0_3/BiasAdd/Add/Fused_Add_" out_port_id="2" id="1042"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_1/conv2d_1/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_1/conv2d_1/Conv2D/Transpose45220_const" out_port_id="0" id="55"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode3/op_after_combine8/conv/separable_conv2d/depthwise" out_port_id="0"/>
+		<IR name="fpn_cells/cell_1/fnode3/op_after_combine8/conv/separable_conv2d/depthwise" out_port_id="2" id="726"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_5/se/Sigmoid_1" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_5/se/Sigmoid_1" out_port_id="1" id="167"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode7/resample_1_11_12/max_pooling2d_5/MaxPool" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode7/resample_1_11_12/max_pooling2d_5/MaxPool" out_port_id="1" id="624"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_2/se/conv2d_1/BiasAdd" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_2/se/conv2d_1/BiasAdd/Add" out_port_id="2" id="79"/>
+	</map>
+	<map>
+		<framework name="class_net/class-1_1/separable_conv2d/ReadVariableOp" out_port_id="0"/>
+		<IR name="6210562108_const" out_port_id="0" id="1153"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode6/AddN_1" out_port_id="0"/>
+		<IR name="fpn_cells/cell_1/fnode6/AddN_1/sum_2" out_port_id="2" id="777"/>
+	</map>
+	<map>
+		<framework name="class_net/class-2_1/separable_conv2d/depthwise" out_port_id="0"/>
+		<IR name="class_net/class-2_1/separable_conv2d/depthwise" out_port_id="2" id="1161"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_13/se/Sigmoid_1" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_13/se/Sigmoid_1" out_port_id="1" id="392"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode3/op_after_combine8/IdentityN" out_port_id="0"/>
+		<IR name="fpn_cells/cell_2/fnode3/op_after_combine8/mul" out_port_id="1" id="889"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode3/op_after_combine8/mul" out_port_id="0"/>
+		<IR name="fpn_cells/cell_2/fnode3/op_after_combine8/mul" out_port_id="1" id="889"/>
+	</map>
+	<map>
+		<framework name="class_net/class-2-bn-4/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="class_net/class-2_1/BiasAdd/Add/Fused_Add_" out_port_id="2" id="1165"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_7/se/conv2d/BiasAdd" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_7/se/conv2d/BiasAdd/Add" out_port_id="2" id="216"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode5/op_after_combine10/bn/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="fpn_cells/cell_1/fnode5/op_after_combine10/conv/BiasAdd/Add/Fused_Add_" out_port_id="2" id="766"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_1/fnode2/resample_1_6_7/resize/size" out_port_id="0"/>
+		<IR name="fpn_cells/cell_1/fnode2/resample_1_6_7/resize/ResizeNearestNeighbor/Cast_163536_const" out_port_id="0" id="683"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode6/op_after_combine11/IdentityN" out_port_id="0"/>
+		<IR name="fpn_cells/cell_2/fnode6/op_after_combine11/mul" out_port_id="1" id="1030"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode6/op_after_combine11/mul" out_port_id="0"/>
+		<IR name="fpn_cells/cell_2/fnode6/op_after_combine11/mul" out_port_id="1" id="1030"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_8/tpu_batch_normalization_1/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_8/tpu_batch_normalization_1/FusedBatchNormV3/variance/Fused_Add_" out_port_id="2" id="237"/>
+	</map>
+	<map>
+		<framework name="box_net/box-predict_1/BiasAdd/ReadVariableOp" out_port_id="0"/>
+		<IR name="box_net/box-predict_1/BiasAdd/ReadVariableOp/EltwiseUnsqueeze36578_const" out_port_id="0" id="968"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_3/conv2d_1/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_3/conv2d_1/Conv2D/Transpose45272_const" out_port_id="0" id="110"/>
+	</map>
+	<map>
+		<framework name="box_net/box-0_2/separable_conv2d/ReadVariableOp" out_port_id="0"/>
+		<IR name="6196961972_const" out_port_id="0" id="990"/>
+	</map>
+	<map>
+		<framework name="class_net/class-1_3/separable_conv2d/ReadVariableOp_1" out_port_id="0"/>
+		<IR name="class_net/class-1_3/separable_conv2d/Transpose45912_const" out_port_id="0" id="1217"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_7/se/conv2d_1/BiasAdd/ReadVariableOp" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_7/se/conv2d_1/BiasAdd/ReadVariableOp/EltwiseUnsqueeze36514_const" out_port_id="0" id="220"/>
+	</map>
+	<map>
+		<framework name="class_net/class-2_3/separable_conv2d/ReadVariableOp_1" out_port_id="0"/>
+		<IR name="class_net/class-2_3/separable_conv2d/Transpose45920_const" out_port_id="0" id="1224"/>
+	</map>
+	<map>
+		<framework name="class_net/class-2-bn-5/FusedBatchNormV3" out_port_id="0"/>
+		<IR name="class_net/class-2_2/BiasAdd/Add/Fused_Add_" out_port_id="2" id="1196"/>
+	</map>
+	<map>
+		<framework name="box_net/box-0_3/separable_conv2d/depthwise" out_port_id="0"/>
+		<IR name="box_net/box-0_3/separable_conv2d/depthwise" out_port_id="2" id="1038"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_8/IdentityN" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_8/mul" out_port_id="1" id="233"/>
+	</map>
+	<map>
+		<framework name="efficientnet-b0/blocks_8/mul" out_port_id="0"/>
+		<IR name="efficientnet-b0/blocks_8/mul" out_port_id="1" id="233"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode3/op_after_combine8/IdentityN" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode3/op_after_combine8/mul" out_port_id="1" id="555"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_0/fnode3/op_after_combine8/mul" out_port_id="0"/>
+		<IR name="fpn_cells/cell_0/fnode3/op_after_combine8/mul" out_port_id="1" id="555"/>
+	</map>
+	<map>
+		<framework name="fpn_cells/cell_2/fnode1/truediv_1" out_port_id="0"/>
+		<IR name="fpn_cells/cell_2/fnode1/mul_1/Fused_Mul_" out_port_id="2" id="839"/>
+	</map>
+	<map>
+		<framework name="class_net/class-1_2/separable_conv2d/depthwise" out_port_id="0"/>
+		<IR name="class_net/class-1_2/separable_conv2d/depthwise" out_port_id="2" id="1185"/>
+	</map>
+</mapping>
