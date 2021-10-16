@@ -6,7 +6,7 @@ Kindly cite this Repository if you use this package
 # Intel Inference Engine API
 ![image](https://user-images.githubusercontent.com/58559090/137576074-15a97e86-e771-4be4-acbd-2e40e91ee771.png)
 
-# Evaluation-of-the-Intel-Movidius-VPU-Neural-Compute-Stick
+# Evaluation of the Intel Movidius VPU Neural Compute Stick
 
 The basic flow for using InferenceEngine API for inference is:
 
