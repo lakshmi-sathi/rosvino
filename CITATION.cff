@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+message: "If you use this package, please cite it as below."
+authors:
+- family-names: "S"
+  given-names: "Lakshmi"
+title: "rosvino: An ROS package for offloading inference using the Intel Movidius Neural Compute Stick"
+date-released: 2021-10-16
+url: "https://github.com/lakshmi-sathi/rosvino"
