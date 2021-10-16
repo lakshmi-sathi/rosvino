@@ -1,3 +1,11 @@
+# rosvino
+This repository contains the ROS package 'rosvino'. It uses the Intel Inference Engine API to run inference on the Intel Neural Compute Stick (Movidius VPU). This package can be used on linux-capable embedded systems and robots that utilize ROS, to offload and run inference on the Intel Neural Compute Stick.
+
+Kindly cite this Repository if you use this package
+
+# Intel Inference Engine API
+![image](https://user-images.githubusercontent.com/58559090/137576074-15a97e86-e771-4be4-acbd-2e40e91ee771.png)
+
 # Evaluation-of-the-Intel-Movidius-VPU-Neural-Compute-Stick
 
 The basic flow for using InferenceEngine API for inference is:
@@ -41,3 +49,4 @@ We can quickly observe some valuable patterns that we were looking forward to bu
 * However, it should be noted that the VPU would use about 1-2 Watts when the turtlebot CPU would use 10 Watts or above for running the inferences.
 
 Putting together these observations, we can observe that the Intel Movidius Neural Compute Stick is doing much more than just offloading inference from the CPU, however, though it offloads the inference as well as significantly boosts the inference performance, it is still far from being real-time. For achieving that, pipelining of inferences and use of a combination of two or more Neural Compute Sticks would be some things to consider.
+
