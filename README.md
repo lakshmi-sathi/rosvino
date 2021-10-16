@@ -12,7 +12,7 @@ The basic flow for using InferenceEngine API for inference is:
 
 ![image](https://user-images.githubusercontent.com/58559090/137576183-fc728405-ee3b-4cfb-8bc3-17432beba274.png)
 
-The modified nodes that are based on the latest OpenVINO are detect.cpp and segment.cpp. Using these two nodes, it is attempted to run and analyse 7 deep learning models each for detection task and segmentation task. In both nodes the inference is done in a blocking manner (not pipelined) so only after completion of an inference, the control flow can continue.
+The ROS nodes are based on the latest OpenVINO, they are - detect.cpp and segment.cpp. Using these two nodes, it is attempted to run and analyse 7 deep learning models each for detection task and segmentation task. In both nodes the inference is done in a blocking manner (not pipelined) so only after completion of an inference, the control flow can continue.
 
 In the ‘detect’ node the resulting detections are published in the form of a message object, one by one, and no image is published at the end. While in the ‘segment’ node, the output is collected in the form of a class matrix (class of each pixel) and a probability matrix (probability of each pixel belonging to that class) which is then processed for visualisation, and published.
 
